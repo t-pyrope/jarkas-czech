@@ -3,7 +3,7 @@ import girls from '../img/girls.jpg';
 import styled from 'styled-components';
 import {Action, ActionBtn, TrialBtn} from '../styles';
 
-const CourseSection = () => {
+const CourseSection = ({setEnrollActive, setTrialActive}) => {
     return(
         <Course>
             <Welcome>
@@ -14,8 +14,8 @@ const CourseSection = () => {
                 </div>
                 <p>Start to work on your pronunciation today and get rid of your accent!</p>
                 <Action>
-                    <ActionBtn>Enroll</ActionBtn>
-                    <TrialBtn>Try for free</TrialBtn>
+                    <ActionBtn onClick={() => {setEnrollActive(true)}}>Enroll</ActionBtn>
+                    <TrialBtn onClick={() => setTrialActive(true)}>Try for free</TrialBtn>
                 </Action>
             </Welcome>
             <Image>

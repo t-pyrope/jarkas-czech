@@ -4,7 +4,7 @@ import thumbsUp from '../img/thumbs-up.png'
 import {Action, ActionBtn, TrialBtnDark, StyledSection, Advantages, Advantage} from '../styles';
 
 
-const AdvantagesSection = () => {
+const AdvantagesSection = ({setEnrollActive, setTrialActive}) => {
     return(
         <StyledAdvantages>
             <div className="headline">
@@ -42,8 +42,8 @@ const AdvantagesSection = () => {
                     </Advantage>
                 </Advantages>
                 <ActionAdv>
-                    <ActionBtn>Enroll</ActionBtn>
-                    <TrialBtnDark>Try for free</TrialBtnDark>
+                    <ActionBtn onClick={() => {setEnrollActive(true)}}>Enroll</ActionBtn>
+                    <TrialBtnDark onClick={() => setTrialActive(true)}>Try for free</TrialBtnDark>
                 </ActionAdv>
         </StyledAdvantages>
     )

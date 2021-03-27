@@ -1,0 +1,104 @@
+import React from 'react';
+import styled from 'styled-components';
+import {TrialBtnDark} from '../styles.js';
+
+const TrialCard = ({trialActive, setTrialActive}) => {
+    const exitCardHandler = (e) => {
+        if (e.target.classList.contains("wrapper")){
+            setTrialActive(false);
+        }
+    }
+    return(
+        <Wrapper className="wrapper" onClick={exitCardHandler}>
+            <Card className="card">
+                <div className="card-header">
+                    <p>Try for free for 3 days</p>
+                </div>
+                <div className="card-body">
+                    <h3>What you will get</h3>
+                    <div className="line"></div>
+                    <ul>
+                        <li> Access to all of 13 courses for 3 days (new added frequently)</li>
+                        <li>Daily plan for training</li>
+                        <li>&nbsp;</li>
+                        <li>&nbsp;</li>
+                    </ul>
+                    <TrialBtnDark>Try for free</TrialBtnDark>
+                </div>
+            </Card>
+        </Wrapper>
+    )
+}
+
+const Wrapper = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 8;
+`;
+
+const Card = styled.div`
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 1px 0px 10px #5c5c5c;;
+    width: 60%;
+    margin: 0rem 2rem;
+
+    @media (max-width: 1300px){
+        width: 80%;
+        margin: 1rem auto 3rem;
+    }
+
+    .card-header {
+    background-color: #2c2c4b;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.6rem;
+    p {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        color: white;
+        margin-left: 1.3rem;
+    }
+}
+
+.card-body {
+    padding: 1.5rem;
+    ul {
+        margin: 1.5rem 1rem;
+    }
+    li {
+        margin-bottom: 1rem;
+    }
+    .line {
+        width: 100%;
+        height: 0.2rem;
+        background-color: #808080;
+    }
+}
+
+h3 {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 6rem;
+}
+
+.per {
+    margin-top: 1rem;
+    margin-left: 0.3rem;
+}
+`
+
+export default TrialCard;

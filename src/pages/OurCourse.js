@@ -9,14 +9,18 @@ import ExpectSection from '../components/ExpectSection';
 import RecommendationSection from '../components/RecommendationSection';
 import EnrollSection from '../components/EnrollSection';
 import ScrollTop from '../components/ScrollTop';
+import EnrollCard from '../components/EnrollCard';
+import TrialCard from '../components/TrialCard';
 
-const OurCourse = () => {
+const OurCourse = ({enrollActive, setEnrollActive, trialActive, setTrialActive}) => {
     return(
         <CourseStyled>
-            <CourseSection />
-            <AdvantagesSection />
-            <RecommendationSection />
-            <ExpectSection />
+            {enrollActive ? <EnrollCard enrollActive={enrollActive} setEnrollActive={setEnrollActive} /> : ""}
+            {trialActive ? <TrialCard trialActive={trialActive} setTrialActive={setTrialActive} /> : ""}
+            <CourseSection setEnrollActive={setEnrollActive} setTrialActive={setTrialActive} />
+            <AdvantagesSection setEnrollActive={setEnrollActive} setTrialActive={setTrialActive} />
+            <RecommendationSection setEnrollActive={setEnrollActive} setTrialActive={setTrialActive} />
+            <ExpectSection setEnrollActive={setEnrollActive} setTrialActive={setTrialActive} />
             <EnrollSection />
             <ScrollTop />
         </CourseStyled>

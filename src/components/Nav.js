@@ -11,16 +11,16 @@ const Nav = () => {
             <ul>
                 <li>
                     <Link to ="/">Our Courses</Link>
-                    <Line initial={{width: "0%"}} transition={{duration: 0.4}} animate={{width: pathname === "/" ? "75%" : "0%"}} />
+                    <Line initial={{width: "0%"}} transition={{duration: 0.4}} animate={{width: pathname === "/" ? "50%" : "0%"}} />
                 </li>
                 <li>
                     <Link to="/team">Our Team</Link>
-                    <Line initial={{width: "0%"}} transition={{duration: 0.4}} animate={{width: pathname === "/team" ? "70%" : "0%"}} />
+                    <Line initial={{width: "0%"}} transition={{duration: 0.4}} animate={{width: pathname === "/team" ? "45%" : "0%"}} />
 
                 </li>
                 <li>
                     <Link to="./contacts">Contact Us</Link>
-                    <Line initial={{width: "0%"}} transition={{duration: 0.4}} animate={{width: pathname === "/contacts" ? "75%" : "0%"}} />
+                    <Line initial={{width: "0%"}} transition={{duration: 0.4}} animate={{width: pathname === "/contacts" ? "50%" : "0%"}} />
 
                 </li>
             </ul>

@@ -18,10 +18,10 @@ const ContactUs = () => {
                 <Info>
                 <div className="social">
                     <h4>Follow us on social media!</h4>
-                    <img src={twitter} alt="twitter" />
-                    <img src={youtube} alt="youtube" />
-                    <img src={instagram} alt="instagram" />
-                    <img src={facebook} alt="facebook" />
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><img src={twitter} alt="twitter" /></a>
+                    <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer"><img src={youtube} alt="youtube" /></a>
+                    <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"><img src={instagram} alt="instagram" /></a>
+                    <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer"><img src={facebook} alt="facebook" /></a>
                 </div>
                 <Line />
                 <div className="address">

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {StyledSection, Action, ActionBtn, Advantages, Advantage, TrialBtnDark} from '../styles';
 import medal from '../img/medal.png';
-const ExpectSection = () => {
+const ExpectSection = ({setEnrollActive, setTrialActive}) => {
     return(
         <ExpectStyled>
             <h2>What can you expect from enrolment?</h2>
@@ -30,8 +30,8 @@ const ExpectSection = () => {
                 </Advantage>
             </Advantages>
             <ActionExp>
-                    <ActionBtn>Enroll</ActionBtn>
-                    <TrialBtnDark>Try for free</TrialBtnDark>
+                    <ActionBtn onClick={() => {setEnrollActive(true)}}>Enroll</ActionBtn>
+                    <TrialBtnDark onClick={() => setTrialActive(true)}>Try for free</TrialBtnDark>
                 </ActionExp>
         </ExpectStyled>
     )
@@ -51,5 +51,7 @@ const ExpectStyled = styled(StyledSection)`
 const ActionExp = styled(Action)`
     justify-content: center;
 `
+
+
 
 export default ExpectSection;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {RecommendationsState} from '../recommendations';
 import {Action, ActionBtn, TrialBtn} from '../styles';
 
-const RecommendationSection = () => {
+const RecommendationSection = ({setEnrollActive, setTrialActive}) => {
     const [recs, setRecs] = useState(RecommendationsState);
 
     return(
@@ -18,8 +18,8 @@ const RecommendationSection = () => {
                 ))}
             </Recommendations>
             <Action>
-                    <ActionBtn>Enroll</ActionBtn>
-                    <TrialBtn>Try for free</TrialBtn>
+                    <ActionBtn onClick={() => {setEnrollActive(true)}}>Enroll</ActionBtn>
+                    <TrialBtn onClick={() => setTrialActive(true)}>Try for free</TrialBtn>
             </Action>
         </RecStyled>
     )
