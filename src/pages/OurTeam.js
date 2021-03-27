@@ -73,8 +73,8 @@ const Card = styled.div`
         position: absolute;
         width: 100%;
         height: 100%;
-        bottom: -10%;
-        background: rgba(0,0,0,0.6);
+        bottom: 0%;
+        background: rgba(0,0,0,0.5);
         color: white;
         padding: 1.5rem 1rem;
         opacity: 0;
@@ -87,18 +87,24 @@ const Card = styled.div`
         h4 {
             margin-bottom: 1rem;
             font-size: 1.5rem;
+            transform: translateY(2rem);
+            transition: all 0.4s ease;
         }
 
         p{
             text-align: center;
             line-height: 2rem;
             font-size: 1.2rem;
+            transform: translateY(2rem);
+            transition: all 0.4s ease;
         }
     }
 
     &:hover > .card {
         opacity: 1;
-        bottom: 0;
+        h4, p {
+            transform: translateY(0rem);
+        }
     }
 `
 

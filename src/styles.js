@@ -19,6 +19,7 @@ export const Action = styled.div`
 export const ActionBtn = styled.button`
     background-color: #eba31d;
     border: none;
+    transition: all 0.4s ease-in-out;
 
     &:hover {
         background-color: #dd9716;
@@ -34,9 +35,9 @@ export const ActionBtn = styled.button`
 export const TrialBtn = styled.button`
     background: transparent;
     border: 3px white solid;
+    transition: all 0.4s ease-in-out;
 
     &:hover {
-        /* background-color: rgba(0,0,0,0.1); */
         border: 3px #e2e2e2 solid;
         color: #e2e2e2;
         
@@ -48,8 +49,9 @@ export const TrialBtn = styled.button`
 `
 export const TrialBtnDark  = styled.button`
     background: transparent;
-    border: 3px #3a3a3a solid;
-    color: #3a3a3a;
+    border: 3px #525252 solid;
+    color: #525252;
+    transition: all 0.4s ease-in-out;
 
     &:hover {
         border: 3px #2e2e2e solid;

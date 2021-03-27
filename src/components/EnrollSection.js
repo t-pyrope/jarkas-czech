@@ -48,13 +48,17 @@ const EnrollSection = () => {
 
 const Enroll = styled.div`
     /* width: 90%; */
-    padding: 2rem;
+    padding: 2rem 2rem 5rem;
     h2 {
         text-align: center;
         margin: 2.5rem;
         /* color: white; */
     }
     background: linear-gradient(to right,#c5a4dd,#a085b3);
+
+    @media (max-width: 1300px) {
+        padding-bottom: 2rem;
+    }
 `
 const Cards = styled.div`
 display: flex;
