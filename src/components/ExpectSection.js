@@ -5,7 +5,7 @@ import medal from '../img/medal.png';
 const ExpectSection = () => {
     return(
         <ExpectStyled>
-            <h2>What can I expect from my enrolment?</h2>
+            <h2>What can you expect from enrolment?</h2>
             <Advantages>
                 <Advantage>
                     <img src={medal} alt="medal" />

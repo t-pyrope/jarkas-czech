@@ -9,7 +9,7 @@ const CourseSection = () => {
             <Welcome>
                 <div className="title">
                     <h2>Do you want to </h2>
-                    <h2>sound in like</h2>
+                    <h2>sound like</h2>
                     <h2>a <span>native speaker</span> in <span>Czech</span>?</h2>
                 </div>
                 <p>Start to work on your pronunciation today and get rid of your accent!</p>

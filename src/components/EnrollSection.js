@@ -72,7 +72,7 @@ overflow: hidden;
 background-color: white;
 box-shadow: 1px 0px 10px #5c5c5c;;
 width: 30%;
-margin-right: 4rem;
+margin: 0rem 2rem;
 
 @media (max-width: 1300px){
     width: 80%;

@@ -8,7 +8,7 @@ const AdvantagesSection = () => {
     return(
         <StyledAdvantages>
             <div className="headline">
-                <h2>Why would I like to apply to this course?</h2>
+                <h2>Why would you like to apply to this course?</h2>
                 <p>Pronunciation of Czech like a native speaker gives you more opportunities in your life</p>
             </div>
                 <Advantages>

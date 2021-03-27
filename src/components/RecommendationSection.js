@@ -27,7 +27,7 @@ const RecommendationSection = () => {
 
 const RecStyled = styled.div`
     width: 100%;
-    padding: 3rem 2rem;
+    padding: 4rem 10rem;
     color: white;
     display: flex;
     flex-direction: column;
@@ -39,11 +39,23 @@ const RecStyled = styled.div`
     h2 {
         text-align: center;
         color: white;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
     }
 
     @media (max-width: 1300px){
-        padding-top: 5rem;
+        padding: 4rem 2rem;
+
+        h2 {
+            margin-bottom: 1rem;
+        }
+    }
+
+    @media (max-width: 600px) {
+        padding: 3rem 0.5rem;
+
+        h2 {
+            margin-bottom: 0;
+        }
     }
 `
 
@@ -87,7 +99,7 @@ const RecStyle = styled.div`
         flex-direction: row;
         margin: 3rem auto;
         .description {
-            margin-left: 3rem;
+            margin-left: 2.5rem;
         }
         p {
             text-align: left;
