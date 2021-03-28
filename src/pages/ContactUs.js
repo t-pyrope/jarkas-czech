@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
-import {Line} from '../styles';
+import {Line, ActionBtn} from '../styles';
 // social media images
 import twitter from '../img/twitter.png';
 import facebook from '../img/facebook.png';
@@ -11,6 +11,39 @@ import ScrollTop from '../components/ScrollTop';
 
 
 const ContactUs = () => {
+    const [email, setEmail] = useState("");
+    const [senderName, setSenderName] = useState("");
+    const [messageText, setMessageText] = useState("");
+    const [fullMessage, setFullMessage] = useState({name: null, email: null, text: null});
+
+    const inputHandler = (e) => {
+        switch(e.target.name){
+            case "name":
+                setSenderName(e.target.value);
+                break;
+            case "email":
+                setEmail(e.target.value);
+                break;
+            case "message":
+                setMessageText(e.target.value)
+                break;
+            default:
+                return null;
+        }
+    }
+
+    const clearInputs = () => {
+        setSenderName("");
+        setEmail("");
+        setMessageText("");
+    }
+
+    const submitHandler = (e) => {
+        e.preventDefault();
+        setFullMessage({...fullMessage, name: senderName, email: email, text: messageText});
+        clearInputs();
+    }
+
     return(
         <ContactStyled>
             <h2>Contacts</h2>
@@ -33,22 +66,22 @@ const ContactUs = () => {
                 </div>
             </Info>
             <Form>
-            <form method="post" id="contact-form">
+            <form id="contact-form" onSubmit={(e) => submitHandler(e)}>
                 <div className="name">
-                    <label for="name">
-                        <input type="text" placeholder="name" name="name" id="name_input" required/>
+                    <label htmlFor="name">
+                        <input type="text" placeholder="Name" name="name" id="name_input" value={senderName} onChange={inputHandler} required/>
                     </label>
                 </div>
                 <div className="email">
-                    <label for="email">
-                        <input type="email" placeholder="email" name="email" id="email_input" required />
+                    <label htmlFor="email">
+                        <input type="email" placeholder="Email" name="email" id="email_input" value={email} onChange={inputHandler} required />
                     </label>
                 </div>
                 <div className="message">
-                    <textarea name="message" placeholder="Your message" id="message_input" cols="30" rows="5" required></textarea>
+                    <textarea name="message" placeholder="Your message" id="message_input" cols="30" rows="5" value={messageText} onChange={inputHandler} required></textarea>
                 </div>
                 <div className="submit">
-                    <button type="submit">Send Message</button>
+                    <ActionBtn type="submit">Send Message</ActionBtn>
                 </div>
             </form>
         </Form>
@@ -91,7 +124,7 @@ const Info = styled.div`
 `
 
 const Form = styled.div`
-    border: solid 3px #474544;
+    border: solid 3px #5f5d5c;
     position: relative;
 
     form {
@@ -105,28 +138,25 @@ const Form = styled.div`
     input[type='text'], [type='email'], select, textarea {
 	background: none;
     border: none;
-	border-bottom: solid 2px #474544;
-	color: #474544;
+	border-bottom: solid 2px #5f5d5c;
+	color: #5f5d5c;
 	margin: 0rem 1rem 1rem 0rem;
-	padding: 0rem 0.5rem 0.5rem 0rem;
-    text-transform: uppercase;
+	padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 	width: 100%;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	-o-box-sizing: border-box;
 	box-sizing: border-box;
+    transition: all 0.5s ease;
 }
 
 input[type='text']:focus, [type='email']:focus, textarea:focus {
 	outline: none;
-	padding: 0 0 0.875em 0;
+	/* padding: 0 0 0.875em 0; */
+    background-color: #f7f4f3;
+    border-bottom: solid 2px #474443;
 }
-
-    button {
-        background-color: orange;
-    }
-
 `
 
 export default ContactUs
