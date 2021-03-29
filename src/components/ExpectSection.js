@@ -10,22 +10,22 @@ const ExpectSection = ({setEnrollActive, setTrialActive}) => {
                 <Advantage>
                     <img src={medal} alt="medal" />
                     <div className="description">
-                        <h4>Immediate access to every of 13 courses</h4>
-                        <p>You can start practising your pronunciation immediately after enrolling and choose the most interesting one for you from a variety of courses.</p>
+                        <h4>Immediate access to all of out 13 courses</h4>
+                        <p>You can start practising your pronunciation immediately after enrolling and choose the most interesting for you from a variety of courses. Decide yourself which course you want to start from.</p>
                     </div>
                 </Advantage>
                 <Advantage>
                     <img src={medal} alt="medal" />
                     <div className="description">
-                        <h4>Live coaching</h4>
-                        <p>Got stuck and don't know where to move next? Our coachers will help you to find the best solution</p>
+                        <h4>Effective tutoring system</h4>
+                        <p>Got stuck and don't know where to move next? Our teachers will navigate you and give their feedback on any problem you may encounter</p>
                     </div>
                 </Advantage>
                 <Advantage>
                     <img src={medal} alt="medal" />
                     <div className="description">
                         <h4>Private facebook group</h4>
-                        <p>You will get access to the facebook group for students of our course, moderated by our coachers, where you will be able to ask questions, communicate, share your progress</p>
+                        <p>You will get access to the facebook group for our students, moderated by the teachers, where you can ask questions, communicate, and share your progress</p>
                     </div>
                 </Advantage>
             </Advantages>

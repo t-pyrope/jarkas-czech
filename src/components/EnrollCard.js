@@ -21,7 +21,7 @@ const EnrollCard = ({enrollActive, setEnrollActive}) => {
                         <li> Instant access to all of 13 courses (new added frequently)</li>
                         <li>Daily plan for training</li>
                         <li>Access to a private facebook group</li>
-                        <li>Help of teachers</li>
+                        <li>Tutoring</li>
                     </ul>
                     <ActionBtn>Enroll</ActionBtn>
                 </div>

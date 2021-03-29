@@ -8,7 +8,7 @@ const AdvantagesSection = ({setEnrollActive, setTrialActive}) => {
     return(
         <StyledAdvantages>
             <div className="headline">
-                <h2>Why would you like to apply to this course?</h2>
+                <h2>What are the benefits of the course?</h2>
                 <p>Pronunciation of Czech like a native speaker gives you more opportunities in your life</p>
             </div>
                 <Advantages>
@@ -29,15 +29,15 @@ const AdvantagesSection = ({setEnrollActive, setTrialActive}) => {
                     <Advantage>
                         <img src={thumbsUp} alt="thumbs up" />
                         <div className="description">
-                            <h4>Self-confidence improvement</h4>
-                            <p>Czech pronunciation is a hard nut to crack! But you certainly can crack it — much easier with our help and 10 minutes of practice per day </p>
+                            <h4>Investment to your self-confidence</h4>
+                            <p>Czech pronunciation is a hard nut to crack! But you certainly can crack it — much easier with proper guidance and special 10 minutes of practice per day we offer you!</p>
                         </div>
                     </Advantage>
                     <Advantage>
                         <img src={thumbsUp} alt="thumbs up" />
                         <div className="description">
                             <h4>Better studying</h4>
-                            <p>Studies show, that active engagement in classroom has a positive effect for the whole process. Don't be shy of your accent anymore!</p>
+                            <p>Working on your accent not only helps with your career, but also with your study - getting fully engaged in discussions with your teacher or classmates has a positive effect for the whole process of studying!</p>
                         </div>
                     </Advantage>
                 </Advantages>
