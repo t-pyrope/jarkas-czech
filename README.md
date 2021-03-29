@@ -2,7 +2,7 @@
 
 A simple website for the imaginary project
 
-Check how it looks like here: https://jarkas-czech.netlify.app/
+Check how it looks like here: [jarkas-czech.netlify.app](https://jarkas-czech.netlify.app/)
 
 ### Usage
 ```
