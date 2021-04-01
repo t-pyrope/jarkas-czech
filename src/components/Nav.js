@@ -1,12 +1,28 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import styled from 'styled-components';
 import {Link, useLocation} from 'react-router-dom';
 import {motion} from 'framer-motion';
+import {navAnimation} from '../animation';
 
 const Nav = () => {
     const {pathname} = useLocation();
+    const [scrolled, setScrolled] = useState(false);
+    
+    const scrollHandler = () => {
+        if(window.scrollY >= 20){
+            setScrolled(true)
+        } else {
+            setScrolled(false)
+        }
+    }
+
+
+    useEffect(()=>{
+        window.addEventListener("scroll", scrollHandler);
+    }, [])
+
     return(
-        <NavStyled>
+        <NavStyled variants={navAnimation} initial="hidden" animate={scrolled ? "show" : "hidden"}>
             <h1><Link to="/">Jarka's Czech</Link></h1>
             <ul>
                 <li>
@@ -28,13 +44,14 @@ const Nav = () => {
     )
 }
 
-const NavStyled = styled.nav`
+const NavStyled = styled(motion.nav)`
     display: flex;
     justify-content: space-between;
     min-height: 10vh;
     margin: auto;
     align-items: center;
-    background-color: #569fc0;
+    /* background-color: #569fc0; */
+    background-color: #82BBD6;
     color: white;
     padding: 1rem 10rem;
     position: sticky;
@@ -57,6 +74,10 @@ const NavStyled = styled.nav`
         li {
             padding-left: 2rem;
         }
+    }
+
+    @media (max-width: 768px){
+        padding: 1rem 2rem;
     }
 `
 

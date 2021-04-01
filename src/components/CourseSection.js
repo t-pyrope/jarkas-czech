@@ -1,5 +1,5 @@
 import React from 'react';
-import girls from '../img/girls.jpg';
+import main from '../img/main.jpg';
 import styled from 'styled-components';
 import {Action, ActionBtn, TrialBtn} from '../styles';
 
@@ -19,7 +19,7 @@ const CourseSection = ({setEnrollActive, setTrialActive}) => {
                 </Action>
             </Welcome>
             <Image>
-                <img src={girls} alt="girls talking" />
+                <img src={main} alt="people talking at work" />
             </Image>
         </Course>
     )
