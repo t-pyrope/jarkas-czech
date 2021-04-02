@@ -44,6 +44,13 @@ const Course = styled.div`
     h2 {
         color: #525252;
         margin-bottom: 0.5rem;
+
+        @media (max-width: 500px){
+            margin-bottom: 0.3rem;
+        }
+        @media (max-width: 320px){
+            margin-bottom: 0;
+        }
     }
     @media (max-width: 1300px) {
         display: block;
@@ -73,10 +80,16 @@ const Welcome = styled.div`
     padding: 2rem;
     .title, p {
         margin-bottom: 1.5rem;
+        @media (max-width: 320px){
+            margin-bottom: 1rem;
+        }
+    }
+    .title {
+        padding: 0.5rem;
     }
     p {
         font-size: 1.2rem;
-        padding-right: 3rem;
+        padding: 0rem 0.5rem;
     }
     span {
         font-weight: 900;
@@ -88,13 +101,20 @@ const Welcome = styled.div`
 
     @media (max-width: 1024px){
         width: 70%;
+        height: 55vh;
     }
 
     @media (max-width: 768px){
+        height: 70vh;
         width: 95%;
         .title {
             margin-top: 1.5rem;
         }
+    }
+
+    @media (max-width: 500px){
+        min-height: 60vh;
+        padding: 0;
     }
 `;
 

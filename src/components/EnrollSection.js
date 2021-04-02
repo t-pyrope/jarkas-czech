@@ -60,6 +60,10 @@ const Enroll = styled.div`
     @media (max-width: 1300px) {
         padding-bottom: 2rem;
     }
+
+    @media (max-width: 500px){
+        padding: 1.5rem 0rem 1rem;
+    }
 `
 const Cards = styled.div`
 display: flex;

@@ -9,10 +9,18 @@ export const Action = styled.div`
     }
     @media (max-width: 1300px) {
         display: block;
-        margin: 0rem auto 2rem;
+        margin: 0rem auto;
         button {
             margin-right: 1rem;
         }
+    }
+
+    @media (max-width: 500px){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0rem;
+        flex-wrap: wrap;
     }
     
 `
@@ -44,6 +52,7 @@ export const TrialBtnDark  = styled(motion.button)`
     background: transparent;
     border: 3px #525252 solid;
     color: #525252;
+    white-space: nowrap;
 
     &:hover {
         border: 3px #2e2e2e solid;

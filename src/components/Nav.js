@@ -78,6 +78,15 @@ const NavStyled = styled(motion.nav)`
 
     @media (max-width: 768px){
         padding: 1rem 2rem;
+
+        li:first-child{
+            padding-left: 0rem;
+        }
+    }
+
+    @media (max-width: 320px) {
+        display: block;
+        padding: 0.5rem 1rem;
     }
 `
 

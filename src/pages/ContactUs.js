@@ -107,6 +107,12 @@ const Columns = styled.div`
     justify-content: space-evenly;
     padding: 2rem 0rem 0rem;
 
+    @media (max-width: 500px){
+        display: block;
+        padding: 0rem;
+        text-align: center;
+    }
+
 `
 
 const Info = styled.div`

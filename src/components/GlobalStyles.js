@@ -9,9 +9,6 @@ const GlobalStyles = createGlobalStyle`
 
     html {
         @media (max-width: 1300px) {
-            h2 {
-                font-size: 2.6rem;
-            }
             h1 {
                     font-size: 1.5rem;
             }
@@ -44,6 +41,13 @@ const GlobalStyles = createGlobalStyle`
         &:focus, &:active {
             outline: none;
         }
+        @media (max-width: 500px){
+            padding: 0.7rem 1.7rem;
+        }
+
+        @media (max-width: 360px){
+            margin-bottom: 0.5rem;
+        }
 
     }
 
@@ -55,6 +59,17 @@ const GlobalStyles = createGlobalStyle`
     h2 {
         font-size: 3rem;
         color: #313131;
+
+        @media (max-width: 1300px){
+            font-size: 2.6rem;
+        }
+        @media (max-width: 600px) {
+            font-size: 2.5rem;
+        }
+
+        @media (max-width: 320px){
+            font-size: 2rem;
+        }
     }
 
     ul {

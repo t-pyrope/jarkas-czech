@@ -73,6 +73,10 @@ const StyledAdvantages = styled(StyledSection)`
 
 const ActionAdv = styled(Action)`
     justify-content: center;
+
+    @media (max-width: 500px){
+        flex-wrap: wrap
+    }
 `
 
 export default AdvantagesSection;

@@ -15,7 +15,7 @@ const RecommendationSection = ({setEnrollActive, setTrialActive}) => {
             </div>
             <Recommendations>
                 {recs.map((rec) => (
-                    <Recommendation author={rec.name} image={rec.img} text={rec.text} key={rec.img} />
+                    <Recommendation className="single-rec" author={rec.name} image={rec.img} text={rec.text} key={rec.img} />
                 ))}
             </Recommendations>
             <Action>
@@ -109,7 +109,16 @@ const RecStyle = styled.div`
             text-align: left;
         }
     }
-
+    @media (max-width: 500px){
+        flex-direction: column;
+        margin: 1rem auto 1rem auto;
+        .description {
+            margin-left: 0;
+        }
+        p, h4 {
+            text-align: center;
+        }
+    }
 `
 
 const Recommendation = ({author, image, text}) => {
