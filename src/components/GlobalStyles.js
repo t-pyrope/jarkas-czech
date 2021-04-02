@@ -32,13 +32,18 @@ const GlobalStyles = createGlobalStyle`
     button {
         cursor: pointer;
         font-family: 'Lato', sans-serif;
-        transition: color 0.4s ease;
         padding: 1rem 2rem;
         border: none;
         font-size: 1rem;
         color: white;
         font-weight: 900;
-        text-transform: uppercase
+        text-transform: uppercase;
+        transition: all 0.4s ease-in-out;
+        transition-property: background-color, color;
+
+        &:focus, &:active {
+            outline: none;
+        }
 
     }
 

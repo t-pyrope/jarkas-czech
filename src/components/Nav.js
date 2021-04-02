@@ -85,7 +85,7 @@ const Line = styled(motion.div)`
     width: 0%;
     height: 2px;
     /* background-image: linear-gradient(to right, #569fc0, #82bbd6, #82bbd6, #569fc0); */
-    background-color: #6eb3d3;
+    background-color: #324739;
     position: absolute;
     bottom: -35%;
     margin: auto;

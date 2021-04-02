@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import {TrialBtnDark} from '../styles.js';
+import {motion} from 'framer-motion';
+import {cardAnimation, btnAnimation} from '../animation';
 
-const TrialCard = ({trialActive, setTrialActive}) => {
+const TrialCard = ({setTrialActive}) => {
     const exitCardHandler = (e) => {
         if (e.target.classList.contains("wrapper")){
             setTrialActive(false);
@@ -10,7 +12,7 @@ const TrialCard = ({trialActive, setTrialActive}) => {
     }
     return(
         <Wrapper className="wrapper" onClick={exitCardHandler}>
-            <Card className="card">
+            <Card className="card" variants={cardAnimation} initial="hidden" animate="show" exit="exit">
                 <div className="card-header">
                     <p>Try for free for 3 days</p>
                 </div>
@@ -23,7 +25,7 @@ const TrialCard = ({trialActive, setTrialActive}) => {
                         <li>&nbsp;</li>
                         <li>&nbsp;</li>
                     </ul>
-                    <TrialBtnDark>Try for free</TrialBtnDark>
+                    <TrialBtnDark variants={btnAnimation} initial="hidden" whileTap="tap">Try for free</TrialBtnDark>
                 </div>
             </Card>
         </Wrapper>
@@ -43,7 +45,7 @@ const Wrapper = styled.div`
     z-index: 8;
 `;
 
-const Card = styled.div`
+const Card = styled(motion.div)`
     display: flex;
     flex-direction: column;
     border-radius: 0.5rem;

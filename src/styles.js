@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {motion} from 'framer-motion';
 
 export const Action = styled.div`
     display: flex;
@@ -16,42 +17,33 @@ export const Action = styled.div`
     
 `
 
-export const ActionBtn = styled.button`
+export const ActionBtn = styled(motion.button)`
     background-color: #eba31d;
     border: none;
-    transition: all 0.4s ease-in-out;
 
     &:hover {
         background-color: #dd9716;
     }
 
     &:active {
-        background-color: #e69807;
-        outline: none;
-
+        background-color: "#e69807";
     }
 `
 
-export const TrialBtn = styled.button`
+export const TrialBtn = styled(motion.button)`
     background: transparent;
     border: 3px white solid;
-    transition: all 0.4s ease-in-out;
 
     &:hover {
         border: 3px #e2e2e2 solid;
         color: #e2e2e2;
         
     }
-
-    &:active {
-        outline: none;
-    }
 `
-export const TrialBtnDark  = styled.button`
+export const TrialBtnDark  = styled(motion.button)`
     background: transparent;
     border: 3px #525252 solid;
     color: #525252;
-    transition: all 0.4s ease-in-out;
 
     &:hover {
         border: 3px #2e2e2e solid;
@@ -61,7 +53,6 @@ export const TrialBtnDark  = styled.button`
     &:active {
         border: 3px #2b2b2b solid;
         color: #2b2b2b;
-        outline: none;
     }
 
 `

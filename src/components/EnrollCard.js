@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import {ActionBtn} from '../styles.js';
+import {motion, AnimatePresence} from 'framer-motion';
+import {cardAnimation, btnAnimation} from '../animation';
 
 const EnrollCard = ({enrollActive, setEnrollActive}) => {
     const exitCardHandler = (e) => {
@@ -10,7 +12,8 @@ const EnrollCard = ({enrollActive, setEnrollActive}) => {
     }
     return(
         <Wrapper className="wrapper" onClick={exitCardHandler}>
-            <Card className="card">
+            <AnimatePresence>
+            <Card className="card" variants={cardAnimation} initial="hidden" animate="show" exit="exit">
                 <div className="card-header">
                     <p>Pay $9 per month</p>
                 </div>
@@ -23,9 +26,10 @@ const EnrollCard = ({enrollActive, setEnrollActive}) => {
                         <li>Access to a private facebook group</li>
                         <li>Tutoring</li>
                     </ul>
-                    <ActionBtn>Enroll</ActionBtn>
+                    <ActionBtn variants={btnAnimation} initial="hidden" whileTap="tap">Enroll</ActionBtn>
                 </div>
             </Card>
+            </AnimatePresence>
         </Wrapper>
     )
 }
@@ -43,7 +47,7 @@ const Wrapper = styled.div`
     z-index: 8;
 `;
 
-const Card = styled.div`
+const Card = styled(motion.div)`
     display: flex;
     flex-direction: column;
     border-radius: 0.5rem;

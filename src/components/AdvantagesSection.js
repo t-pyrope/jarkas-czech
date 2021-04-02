@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import thumbsUp from '../img/thumbs-up.png'
 import {Action, ActionBtn, TrialBtnDark, StyledSection, Advantages, Advantage} from '../styles';
-
+import {btnAnimation} from '../animation';
 
 const AdvantagesSection = ({setEnrollActive, setTrialActive}) => {
     return(
@@ -42,8 +42,8 @@ const AdvantagesSection = ({setEnrollActive, setTrialActive}) => {
                     </Advantage>
                 </Advantages>
                 <ActionAdv>
-                    <ActionBtn onClick={() => {setEnrollActive(true)}}>Enroll</ActionBtn>
-                    <TrialBtnDark onClick={() => setTrialActive(true)}>Try for free</TrialBtnDark>
+                    <ActionBtn onClick={() => {setEnrollActive(true)}} variants={btnAnimation} initial="hidden" whileTap="tap">Enroll</ActionBtn>
+                    <TrialBtnDark onClick={() => setTrialActive(true)} variants={btnAnimation} initial="hidden" whileTap="tap">Try for free</TrialBtnDark>
                 </ActionAdv>
         </StyledAdvantages>
     )

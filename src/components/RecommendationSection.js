@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import styled from 'styled-components';
 import {RecommendationsState} from '../recommendations';
 import {Action, ActionBtn, TrialBtn} from '../styles';
+import {btnAnimation} from '../animation';
 
 const RecommendationSection = ({setEnrollActive, setTrialActive}) => {
     const [recs, setRecs] = useState(RecommendationsState);
@@ -18,8 +19,8 @@ const RecommendationSection = ({setEnrollActive, setTrialActive}) => {
                 ))}
             </Recommendations>
             <Action>
-                    <ActionBtn onClick={() => {setEnrollActive(true)}}>Enroll</ActionBtn>
-                    <TrialBtn onClick={() => setTrialActive(true)}>Try for free</TrialBtn>
+                    <ActionBtn onClick={() => {setEnrollActive(true)}} variants={btnAnimation} initial="hidden" whileTap="tap">Enroll</ActionBtn>
+                    <TrialBtn onClick={() => setTrialActive(true)} variants={btnAnimation} initial="hidden" whileTap="tap">Try for free</TrialBtn>
             </Action>
         </RecStyled>
     )

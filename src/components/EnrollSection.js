@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import {ActionBtn} from '../styles';
+import {ActionBtn, TrialBtnDark} from '../styles';
+import {btnAnimation} from '../animation';
 
 const EnrollSection = () => {
     return(
@@ -21,7 +22,7 @@ const EnrollSection = () => {
                         <li>Help of teachers</li>
                     </ul>
 
-                    <ActionBtn>Enroll</ActionBtn>
+                    <ActionBtn variants={btnAnimation} initial="hidden" whileTap="tap">Enroll</ActionBtn>
 
                 </div>
             </Card>
@@ -38,7 +39,7 @@ const EnrollSection = () => {
                         <li>&nbsp;</li>
                         <li>&nbsp;</li>
                     </ul>
-                    <TrialBtn>Try for free</TrialBtn>
+                    <TrialBtnDark variants={btnAnimation} initial="hidden" whileTap="tap">Try for free</TrialBtnDark>
                     </div>
                 </Card>
             </Cards>
@@ -125,11 +126,5 @@ h3 {
     margin-top: 1rem;
     margin-left: 0.3rem;
 }
-`
-
-const TrialBtn = styled.button`
-    background: transparent;
-    border: 3px #1f1f1f solid;
-    color: #1f1f1f;
-`
+`;
 export default EnrollSection;

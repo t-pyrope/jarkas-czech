@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import {StyledSection, Action, ActionBtn, Advantages, Advantage, TrialBtnDark} from '../styles';
 import medal from '../img/medal.png';
+import {btnAnimation} from '../animation';
+
 const ExpectSection = ({setEnrollActive, setTrialActive}) => {
     return(
         <ExpectStyled>
@@ -30,8 +32,8 @@ const ExpectSection = ({setEnrollActive, setTrialActive}) => {
                 </Advantage>
             </Advantages>
             <ActionExp>
-                    <ActionBtn onClick={() => {setEnrollActive(true)}}>Enroll</ActionBtn>
-                    <TrialBtnDark onClick={() => setTrialActive(true)}>Try for free</TrialBtnDark>
+                    <ActionBtn onClick={() => {setEnrollActive(true)}} variants={btnAnimation} initial="hidden" whileTap="tap">Enroll</ActionBtn>
+                    <TrialBtnDark onClick={() => setTrialActive(true)} variants={btnAnimation} initial="hidden" whileTap="tap">Try for free</TrialBtnDark>
                 </ActionExp>
         </ExpectStyled>
     )
