@@ -142,27 +142,26 @@ const Form = styled.div`
 
     }
     input[type='text'], [type='email'], select, textarea {
-	background: none;
-    border: none;
-	border-bottom: solid 2px #5f5d5c;
-	color: #5f5d5c;
-	margin: 0rem 1rem 1rem 0rem;
-	padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-	width: 100%;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	box-sizing: border-box;
-    transition: all 0.5s ease;
-}
+        background: none;
+        border: none;
+        border-bottom: solid 2px #5f5d5c;
+        color: #5f5d5c;
+        margin: 0rem 1rem 1rem 0rem;
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+        transition: all 0.5s ease;
+    }
 
-input[type='text']:focus, [type='email']:focus, textarea:focus {
-	outline: none;
-	/* padding: 0 0 0.875em 0; */
-    background-color: #f7f4f3;
-    border-bottom: solid 2px #474443;
-}
+    input[type='text']:focus, [type='email']:focus, textarea:focus {
+        outline: none;
+        background-color: #f7f4f3;
+        border-bottom: solid 2px #474443;
+    }
 `
 
 export default ContactUs

@@ -8,7 +8,6 @@ const RecommendationSection = ({setEnrollActive, setTrialActive}) => {
     const [recs] = useState(RecommendationsState);
 
     return(
-
         <RecStyled>
             <div className="title">
                 <h2>What our students say</h2>
@@ -19,8 +18,8 @@ const RecommendationSection = ({setEnrollActive, setTrialActive}) => {
                 ))}
             </Recommendations>
             <Action>
-                    <ActionBtn onClick={() => {setEnrollActive(true)}} variants={btnAnimation} initial="hidden" whileTap="tap">Enroll</ActionBtn>
-                    <TrialBtn onClick={() => setTrialActive(true)} variants={btnAnimation} initial="hidden" whileTap="tap">Try for free</TrialBtn>
+                <ActionBtn onClick={() => {setEnrollActive(true)}} variants={btnAnimation} initial="hidden" whileTap="tap">Enroll</ActionBtn>
+                <TrialBtn onClick={() => setTrialActive(true)} variants={btnAnimation} initial="hidden" whileTap="tap">Try for free</TrialBtn>
             </Action>
         </RecStyled>
     )
@@ -69,7 +68,6 @@ const Recommendations = styled.div`
         display: block;
 
     }
-    /* min-height: 50vh; */
 `
 
 const RecStyle = styled.div`

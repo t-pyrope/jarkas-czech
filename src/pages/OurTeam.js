@@ -1,12 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import  italo from '../img/team-italo.jpg'
+import italo from '../img/team-italo.jpg'
 import jarka from '../img/team-jarka.jpg'
 import olenka from '../img/team-olenka.jpg'
 import ScrollTop from '../components/ScrollTop';
 
 const OurTeam = () => {
-
     return(
         <TeamStyled>
             <h2>Our Team</h2>
@@ -41,7 +40,6 @@ const OurTeam = () => {
 const TeamStyled = styled.div`
     width: 90%;
     margin: 1rem auto;
-    /* min-height: 80vh; */
 
     h2 {
         text-align: center;

@@ -61,46 +61,46 @@ const Card = styled(motion.div)`
     }
 
     .card-header {
-    background-color: #2c2c4b;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1.6rem;
-    p {
+        background-color: #2c2c4b;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.6rem;
+        p {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            color: white;
+            margin-left: 1.3rem;
+        }
+    }
+
+    .card-body {
+        padding: 1.5rem;
+        ul {
+            margin: 1.5rem 1rem;
+        }
+        li {
+            margin-bottom: 1rem;
+        }
+        .line {
+            width: 100%;
+            height: 0.2rem;
+            background-color: #808080;
+        }
+    }
+
+    h3 {
+        display: flex;
+        margin-bottom: 1rem;
+    }
+
+    .price {
+        font-size: 6rem;
+    }
+
+    .per {
         margin-top: 1rem;
-        margin-bottom: 1rem;
-        color: white;
-        margin-left: 1.3rem;
+        margin-left: 0.3rem;
     }
-}
-
-.card-body {
-    padding: 1.5rem;
-    ul {
-        margin: 1.5rem 1rem;
-    }
-    li {
-        margin-bottom: 1rem;
-    }
-    .line {
-        width: 100%;
-        height: 0.2rem;
-        background-color: #808080;
-    }
-}
-
-h3 {
-    display: flex;
-    margin-bottom: 1rem;
-}
-
-.price {
-    font-size: 6rem;
-}
-
-.per {
-    margin-top: 1rem;
-    margin-left: 0.3rem;
-}
 `
 
 export default TrialCard;

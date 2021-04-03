@@ -17,7 +17,6 @@ const GlobalStyles = createGlobalStyle`
 
     body{
         font-family: 'Lato', sans-serif;
-        /* font-size: 1rem; */
         color: #252525;
     }
 

@@ -4,7 +4,7 @@ import {ActionBtn} from '../styles.js';
 import {motion, AnimatePresence} from 'framer-motion';
 import {cardAnimation, btnAnimation} from '../animation';
 
-const EnrollCard = ({enrollActive, setEnrollActive}) => {
+const EnrollCard = ({setEnrollActive}) => {
     const exitCardHandler = (e) => {
         if (e.target.classList.contains("wrapper")){
             setEnrollActive(false);
@@ -13,22 +13,22 @@ const EnrollCard = ({enrollActive, setEnrollActive}) => {
     return(
         <Wrapper className="wrapper" onClick={exitCardHandler}>
             <AnimatePresence>
-            <Card className="card" variants={cardAnimation} initial="hidden" animate="show" exit="exit">
-                <div className="card-header">
-                    <p>Pay $9 per month</p>
-                </div>
-                <div className="card-body">
-                    <h3>What you will get</h3>
-                    <div className="line"></div>
-                    <ul>
-                        <li> Instant access to all of 13 courses (new added frequently)</li>
-                        <li>Daily plan for training</li>
-                        <li>Access to a private facebook group</li>
-                        <li>Tutoring</li>
-                    </ul>
-                    <ActionBtn variants={btnAnimation} initial="hidden" whileTap="tap">Enroll</ActionBtn>
-                </div>
-            </Card>
+                <Card className="card" variants={cardAnimation} initial="hidden" animate="show" exit="exit">
+                    <div className="card-header">
+                        <p>Pay $9 per month</p>
+                    </div>
+                    <div className="card-body">
+                        <h3>What you will get</h3>
+                        <div className="line"></div>
+                        <ul>
+                            <li> Instant access to all of 13 courses (new added frequently)</li>
+                            <li>Daily plan for training</li>
+                            <li>Access to a private facebook group</li>
+                            <li>Tutoring</li>
+                        </ul>
+                        <ActionBtn variants={btnAnimation} initial="hidden" whileTap="tap">Enroll</ActionBtn>
+                    </div>
+                </Card>
             </AnimatePresence>
         </Wrapper>
     )

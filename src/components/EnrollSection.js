@@ -8,38 +8,36 @@ const EnrollSection = () => {
         <Enroll>
             <h2>Enroll to Jarka's Czech courses</h2>
             <Cards>
-            <Card className="card">
-                <div className="card-header">
-                    <p>Pay monthly</p>
-                </div>
-                <div className="card-body">
-                    <h3><span className="price">$9</span><span className="per"> per month</span></h3>
-                    <div className="line"></div>
-                    <ul>
-                        <li> Instant access to all of 13 courses (new added frequently)</li>
-                        <li>Daily plan for training</li>
-                        <li>Access to a private facebook group</li>
-                        <li>Help of teachers</li>
-                    </ul>
-
-                    <ActionBtn variants={btnAnimation} initial="hidden" whileTap="tap">Enroll</ActionBtn>
-
-                </div>
-            </Card>
-            <Card>
-                <div className="card-header">
-                    <p>Try for free</p>
-                </div>
-                <div className="card-body">
-                    <h3><span className="price">$0</span><span className="per"> for 3 days</span></h3>
-                    <div className="line"></div>
-                    <ul>
-                        <li> Access to all of 13 courses for 3 days (new added frequently)</li>
-                        <li>Daily plan for training</li>
-                        <li>&nbsp;</li>
-                        <li>&nbsp;</li>
-                    </ul>
-                    <TrialBtnDark variants={btnAnimation} initial="hidden" whileTap="tap">Try for free</TrialBtnDark>
+                <Card className="card">
+                    <div className="card-header">
+                        <p>Pay monthly</p>
+                    </div>
+                    <div className="card-body">
+                        <h3><span className="price">$9</span><span className="per"> per month</span></h3>
+                        <div className="line"></div>
+                        <ul>
+                            <li> Instant access to all of 13 courses (new added frequently)</li>
+                            <li>Daily plan for training</li>
+                            <li>Access to a private facebook group</li>
+                            <li>Help of teachers</li>
+                        </ul>
+                        <ActionBtn variants={btnAnimation} initial="hidden" whileTap="tap">Enroll</ActionBtn>
+                    </div>
+                </Card>
+                <Card>
+                    <div className="card-header">
+                        <p>Try for free</p>
+                    </div>
+                    <div className="card-body">
+                        <h3><span className="price">$0</span><span className="per"> for 3 days</span></h3>
+                        <div className="line"></div>
+                        <ul>
+                            <li> Access to all of 13 courses for 3 days (new added frequently)</li>
+                            <li>Daily plan for training</li>
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                        </ul>
+                        <TrialBtnDark variants={btnAnimation} initial="hidden" whileTap="tap">Try for free</TrialBtnDark>
                     </div>
                 </Card>
             </Cards>
@@ -48,14 +46,12 @@ const EnrollSection = () => {
 }
 
 const Enroll = styled.div`
-    /* width: 90%; */
     padding: 2rem 2rem 5rem;
+    background: linear-gradient(to right,#c5a4dd,#a085b3);
     h2 {
         text-align: center;
         margin: 2.5rem;
-        /* color: white; */
     }
-    background: linear-gradient(to right,#c5a4dd,#a085b3);
 
     @media (max-width: 1300px) {
         padding-bottom: 2rem;
@@ -66,27 +62,27 @@ const Enroll = styled.div`
     }
 `
 const Cards = styled.div`
-display: flex;
-justify-content: center;
+    display: flex;
+    justify-content: center;
 
-@media (max-width: 1300px){
-    display: block;
-}
+    @media (max-width: 1300px){
+        display: block;
+    }
 `
 const Card = styled.div`
-display: flex;
-flex-direction: column;
-border-radius: 0.5rem;
-overflow: hidden;
-background-color: white;
-box-shadow: 1px 0px 10px #5c5c5c;;
-width: 30%;
-margin: 0rem 2rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 1px 0px 10px #5c5c5c;;
+    width: 30%;
+    margin: 0rem 2rem;
 
-@media (max-width: 1300px){
-    width: 80%;
-    margin: 1rem auto 3rem;
-}
+    @media (max-width: 1300px){
+        width: 80%;
+        margin: 1rem auto 3rem;
+    }
 
 .card-header {
     background-color: #2c2c4b;

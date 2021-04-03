@@ -50,14 +50,12 @@ const NavStyled = styled(motion.nav)`
     min-height: 10vh;
     margin: auto;
     align-items: center;
-    /* background-color: #569fc0; */
     background-color: #82BBD6;
     color: white;
     padding: 1rem 10rem;
     position: sticky;
     top: 0;
     z-index: 10;
-    /* box-shadow: 0px 1px 3px #317392; */
 
     ul {
         display: flex;
@@ -93,7 +91,6 @@ const NavStyled = styled(motion.nav)`
 const Line = styled(motion.div)`
     width: 0%;
     height: 2px;
-    /* background-image: linear-gradient(to right, #569fc0, #82bbd6, #82bbd6, #569fc0); */
     background-color: #324739;
     position: absolute;
     bottom: -35%;

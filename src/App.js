@@ -1,12 +1,11 @@
 import React, {useState} from 'react';
+import {Switch, Route, useLocation} from 'react-router-dom';
 import GlobalStyles from './components/GlobalStyles';
 // pages
 import Nav from './components/Nav';
 import OurCourse from './pages/OurCourse';
 import OurTeam from './pages/OurTeam';
 import ContactUs from './pages/ContactUs';
-
-import {Switch, Route, useLocation} from 'react-router-dom';
 
 function App() {
   const location = useLocation();

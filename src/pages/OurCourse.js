@@ -15,8 +15,8 @@ import TrialCard from '../components/TrialCard';
 const OurCourse = ({enrollActive, setEnrollActive, trialActive, setTrialActive}) => {
     return(
         <CourseStyled>
-            {enrollActive ? <EnrollCard enrollActive={enrollActive} setEnrollActive={setEnrollActive} /> : ""}
-            {trialActive ? <TrialCard trialActive={trialActive} setTrialActive={setTrialActive} /> : ""}
+            {enrollActive ? <EnrollCard setEnrollActive={setEnrollActive} /> : ""}
+            {trialActive ? <TrialCard setTrialActive={setTrialActive} /> : ""}
             <CourseSection setEnrollActive={setEnrollActive} setTrialActive={setTrialActive} />
             <AdvantagesSection setEnrollActive={setEnrollActive} setTrialActive={setTrialActive} />
             <RecommendationSection setEnrollActive={setEnrollActive} setTrialActive={setTrialActive} />
