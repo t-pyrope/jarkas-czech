@@ -5,7 +5,7 @@ import {Action, ActionBtn, TrialBtn} from '../styles';
 import {btnAnimation} from '../animation';
 
 const RecommendationSection = ({setEnrollActive, setTrialActive}) => {
-    const [recs, setRecs] = useState(RecommendationsState);
+    const [recs] = useState(RecommendationsState);
 
     return(
 
