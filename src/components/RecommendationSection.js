@@ -1,29 +1,30 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import {RecommendationsState} from '../recommendations';
-import {Action, ActionBtn, TrialBtn} from '../styles';
-import {btnAnimation} from '../animation';
+import PropTypes from 'prop-types';
+import RecommendationsState from '../recommendations';
+import { Action, ActionBtn, TrialBtn } from '../styles';
+import { btnAnimation } from '../animation';
 
-const RecommendationSection = ({setEnrollActive, setTrialActive}) => {
-    const [recs] = useState(RecommendationsState);
+const RecommendationSection = ({ setEnrollActive, setTrialActive }) => {
+  const [recs] = useState(RecommendationsState);
 
-    return(
-        <RecStyled>
-            <div className="title">
-                <h2>What our students say</h2>
-            </div>
-            <Recommendations>
-                {recs.map((rec) => (
-                    <Recommendation className="single-rec" author={rec.name} image={rec.img} text={rec.text} key={rec.img} />
-                ))}
-            </Recommendations>
-            <Action>
-                <ActionBtn onClick={() => {setEnrollActive(true)}} variants={btnAnimation} initial="hidden" whileTap="tap">Enroll</ActionBtn>
-                <TrialBtn onClick={() => setTrialActive(true)} variants={btnAnimation} initial="hidden" whileTap="tap">Try for free</TrialBtn>
-            </Action>
-        </RecStyled>
-    )
-}
+  return (
+    <RecStyled>
+      <div className="title">
+        <h2>What our students say</h2>
+      </div>
+      <Recommendations>
+        {recs.map((rec) => (
+          <Recommendation className="single-rec" author={rec.name} image={rec.img} text={rec.text} key={rec.img} />
+        ))}
+      </Recommendations>
+      <Action>
+        <ActionBtn onClick={() => { setEnrollActive(true); }} variants={btnAnimation} initial="hidden" whileTap="tap">Enroll</ActionBtn>
+        <TrialBtn onClick={() => setTrialActive(true)} variants={btnAnimation} initial="hidden" whileTap="tap">Try for free</TrialBtn>
+      </Action>
+    </RecStyled>
+  );
+};
 
 const RecStyled = styled.div`
     width: 100%;
@@ -57,7 +58,12 @@ const RecStyled = styled.div`
             margin-bottom: 0;
         }
     }
-`
+`;
+
+RecommendationSection.propTypes = {
+  setEnrollActive: PropTypes.func.isRequired,
+  setTrialActive: PropTypes.func.isRequired,
+};
 
 const Recommendations = styled.div`
     display: flex;
@@ -68,7 +74,7 @@ const Recommendations = styled.div`
         display: block;
 
     }
-`
+`;
 
 const RecStyle = styled.div`
     width: 25%;
@@ -117,17 +123,24 @@ const RecStyle = styled.div`
             text-align: center;
         }
     }
-`
+`;
 
-const Recommendation = ({author, image, text}) => {
-    return (<RecStyle>
-        <img src={image} alt="student" />
-        <div className="description">
-            <h4>{author}</h4>
-            <p>{text}</p>
-        </div>
+const Recommendation = ({ author, image, text }) => {
+  return (
+    <RecStyle>
+      <img src={image} alt="student" />
+      <div className="description">
+        <h4>{author}</h4>
+        <p>{text}</p>
+      </div>
     </RecStyle>
-    )
-}
+  );
+};
+
+Recommendation.propTypes = {
+  author: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+};
 
 export default RecommendationSection;

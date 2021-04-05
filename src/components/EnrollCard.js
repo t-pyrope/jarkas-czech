@@ -1,38 +1,39 @@
 import React from 'react';
 import styled from 'styled-components';
-import {ActionBtn} from '../styles.js';
-import {motion, AnimatePresence} from 'framer-motion';
-import {cardAnimation, btnAnimation} from '../animation';
+import PropTypes from 'prop-types';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ActionBtn } from '../styles';
+import { cardAnimation, btnAnimation } from '../animation';
 
-const EnrollCard = ({setEnrollActive}) => {
-    const exitCardHandler = (e) => {
-        if (e.target.classList.contains("wrapper")){
-            setEnrollActive(false);
-        }
+const EnrollCard = ({ setEnrollActive }) => {
+  const exitCardHandler = (e) => {
+    if (e.target.classList.contains('wrapper')) {
+      setEnrollActive(false);
     }
-    return(
-        <Wrapper className="wrapper" onClick={exitCardHandler}>
-            <AnimatePresence>
-                <Card className="card" variants={cardAnimation} initial="hidden" animate="show" exit="exit">
-                    <div className="card-header">
-                        <p>Pay $9 per month</p>
-                    </div>
-                    <div className="card-body">
-                        <h3>What you will get</h3>
-                        <div className="line"></div>
-                        <ul>
-                            <li> Instant access to all of 13 courses (new added frequently)</li>
-                            <li>Daily plan for training</li>
-                            <li>Access to a private facebook group</li>
-                            <li>Tutoring</li>
-                        </ul>
-                        <ActionBtn variants={btnAnimation} initial="hidden" whileTap="tap">Enroll</ActionBtn>
-                    </div>
-                </Card>
-            </AnimatePresence>
-        </Wrapper>
-    )
-}
+  };
+  return (
+    <Wrapper className="wrapper" onClick={exitCardHandler}>
+      <AnimatePresence>
+        <Card className="card" variants={cardAnimation} initial="hidden" animate="show" exit="exit">
+          <div className="card-header">
+            <p>Pay $9 per month</p>
+          </div>
+          <div className="card-body">
+            <h3>What you will get</h3>
+            <div className="line" />
+            <ul>
+              <li> Instant access to all of 13 courses (new added frequently)</li>
+              <li>Daily plan for training</li>
+              <li>Access to a private facebook group</li>
+              <li>Tutoring</li>
+            </ul>
+            <ActionBtn variants={btnAnimation} initial="hidden" whileTap="tap">Enroll</ActionBtn>
+          </div>
+        </Card>
+      </AnimatePresence>
+    </Wrapper>
+  );
+};
 
 const Wrapper = styled.div`
     position: fixed;
@@ -46,6 +47,10 @@ const Wrapper = styled.div`
     align-items: center;
     z-index: 8;
 `;
+
+EnrollCard.propTypes = {
+  setEnrollActive: PropTypes.func.isRequired,
+};
 
 const Card = styled(motion.div)`
     display: flex;
@@ -103,6 +108,6 @@ h3 {
     margin-top: 1rem;
     margin-left: 0.3rem;
 }
-`
+`;
 
 export default EnrollCard;

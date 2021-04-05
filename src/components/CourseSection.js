@@ -1,28 +1,43 @@
 import React from 'react';
-import main from '../img/main.jpg';
 import styled from 'styled-components';
-import {Action, ActionBtn, TrialBtnDark} from '../styles';
-import {btnAnimation} from '../animation';
+import PropTypes from 'prop-types';
+import main from '../img/main.jpg';
+import { Action, ActionBtn, TrialBtnDark } from '../styles';
+import { btnAnimation } from '../animation';
 
-const CourseSection = ({setEnrollActive, setTrialActive}) => {
-    return(
-        <Course>
-            <div className="parallax"></div>
-            <Welcome>
-                <div className="title">
-                    <h2>Do you want to </h2>
-                    <h2>sound like</h2>
-                    <h2>a <span>native speaker</span> in <span>Czech</span>?</h2>
-                </div>
-                <p>Start to work on your pronunciation today and get rid of your accent!</p>
-                <Action>
-                    <ActionBtn onClick={() => {setEnrollActive(true)}} variants={btnAnimation} initial="hidden" whileTap="tap">Enroll</ActionBtn>
-                    <TrialBtnDark onClick={() => setTrialActive(true)} variants={btnAnimation} initial="hidden" whileTap="tap">Try for free</TrialBtnDark>
-                </Action>
-            </Welcome>
-        </Course>
-    )
-}
+const CourseSection = ({ setEnrollActive, setTrialActive }) => {
+  return (
+    <Course>
+      <div className="parallax" />
+      <Welcome>
+        <div className="title">
+          <h2>Do you want to </h2>
+          <h2>sound like</h2>
+          <h2>
+            a
+            {' '}
+            <span>native speaker</span>
+            {' '}
+            in
+            {' '}
+            <span>Czech</span>
+            ?
+          </h2>
+        </div>
+        <p>Start to work on your pronunciation today and get rid of your accent!</p>
+        <Action>
+          <ActionBtn onClick={() => { setEnrollActive(true); }} variants={btnAnimation} initial="hidden" whileTap="tap">Enroll</ActionBtn>
+          <TrialBtnDark onClick={() => setTrialActive(true)} variants={btnAnimation} initial="hidden" whileTap="tap">Try for free</TrialBtnDark>
+        </Action>
+      </Welcome>
+    </Course>
+  );
+};
+
+CourseSection.propTypes = {
+  setEnrollActive: PropTypes.func.isRequired,
+  setTrialActive: PropTypes.func.isRequired,
+};
 
 const Course = styled.div`
     min-height: 90vh;
@@ -57,7 +72,7 @@ const Course = styled.div`
         padding: 2rem 3rem 5rem 3rem;
         text-align: center;
     }
-`
+`;
 
 const Welcome = styled.div`
     text-align: center;

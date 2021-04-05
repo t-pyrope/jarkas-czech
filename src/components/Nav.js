@@ -1,48 +1,47 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import {Link, useLocation} from 'react-router-dom';
-import {motion} from 'framer-motion';
-import {navAnimation} from '../animation';
+import { Link, useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { navAnimation } from '../animation';
 
 const Nav = () => {
-    const {pathname} = useLocation();
-    const [scrolled, setScrolled] = useState(false);
-    
-    const scrollHandler = () => {
-        if(window.scrollY >= 20){
-            setScrolled(true)
-        } else {
-            setScrolled(false)
-        }
+  const { pathname } = useLocation();
+  const [scrolled, setScrolled] = useState(false);
+
+  const scrollHandler = () => {
+    if (window.scrollY >= 20) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
     }
+  };
 
+  useEffect(() => {
+    window.addEventListener('scroll', scrollHandler);
+  }, []);
 
-    useEffect(()=>{
-        window.addEventListener("scroll", scrollHandler);
-    }, [])
+  return (
+    <NavStyled variants={navAnimation} initial="hidden" animate={scrolled ? 'show' : 'hidden'}>
+      <h1><Link to="/">Jarka&#39;s Czech</Link></h1>
+      <ul>
+        <li>
+          <Link to="/">Our Courses</Link>
+          <Line initial={{ width: '0%' }} transition={{ duration: 0.4 }} animate={{ width: pathname === '/' ? '50%' : '0%' }} />
+        </li>
+        <li>
+          <Link to="/team">Our Team</Link>
+          <Line initial={{ width: '0%' }} transition={{ duration: 0.4 }} animate={{ width: pathname === '/team' ? '45%' : '0%' }} />
 
-    return(
-        <NavStyled variants={navAnimation} initial="hidden" animate={scrolled ? "show" : "hidden"}>
-            <h1><Link to="/">Jarka's Czech</Link></h1>
-            <ul>
-                <li>
-                    <Link to ="/">Our Courses</Link>
-                    <Line initial={{width: "0%"}} transition={{duration: 0.4}} animate={{width: pathname === "/" ? "50%" : "0%"}} />
-                </li>
-                <li>
-                    <Link to="/team">Our Team</Link>
-                    <Line initial={{width: "0%"}} transition={{duration: 0.4}} animate={{width: pathname === "/team" ? "45%" : "0%"}} />
+        </li>
+        <li>
+          <Link to="./contacts">Contact Us</Link>
+          <Line initial={{ width: '0%' }} transition={{ duration: 0.4 }} animate={{ width: pathname === '/contacts' ? '50%' : '0%' }} />
 
-                </li>
-                <li>
-                    <Link to="./contacts">Contact Us</Link>
-                    <Line initial={{width: "0%"}} transition={{duration: 0.4}} animate={{width: pathname === "/contacts" ? "50%" : "0%"}} />
-
-                </li>
-            </ul>
-        </NavStyled>
-    )
-}
+        </li>
+      </ul>
+    </NavStyled>
+  );
+};
 
 const NavStyled = styled(motion.nav)`
     display: flex;
@@ -86,7 +85,7 @@ const NavStyled = styled(motion.nav)`
         display: block;
         padding: 0.5rem 1rem;
     }
-`
+`;
 
 const Line = styled(motion.div)`
     width: 0%;
@@ -96,6 +95,6 @@ const Line = styled(motion.div)`
     bottom: -35%;
     margin: auto;
     
-`
+`;
 
 export default Nav;

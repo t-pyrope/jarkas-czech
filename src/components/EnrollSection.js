@@ -1,49 +1,55 @@
 import React from 'react';
 import styled from 'styled-components';
-import {ActionBtn, TrialBtnDark} from '../styles';
-import {btnAnimation} from '../animation';
+import { ActionBtn, TrialBtnDark } from '../styles';
+import { btnAnimation } from '../animation';
 
 const EnrollSection = () => {
-    return(
-        <Enroll>
-            <h2>Enroll to Jarka's Czech courses</h2>
-            <Cards>
-                <Card className="card">
-                    <div className="card-header">
-                        <p>Pay monthly</p>
-                    </div>
-                    <div className="card-body">
-                        <h3><span className="price">$9</span><span className="per"> per month</span></h3>
-                        <div className="line"></div>
-                        <ul>
-                            <li> Instant access to all of 13 courses (new added frequently)</li>
-                            <li>Daily plan for training</li>
-                            <li>Access to a private facebook group</li>
-                            <li>Help of teachers</li>
-                        </ul>
-                        <ActionBtn variants={btnAnimation} initial="hidden" whileTap="tap">Enroll</ActionBtn>
-                    </div>
-                </Card>
-                <Card>
-                    <div className="card-header">
-                        <p>Try for free</p>
-                    </div>
-                    <div className="card-body">
-                        <h3><span className="price">$0</span><span className="per"> for 3 days</span></h3>
-                        <div className="line"></div>
-                        <ul>
-                            <li> Access to all of 13 courses for 3 days (new added frequently)</li>
-                            <li>Daily plan for training</li>
-                            <li>&nbsp;</li>
-                            <li>&nbsp;</li>
-                        </ul>
-                        <TrialBtnDark variants={btnAnimation} initial="hidden" whileTap="tap">Try for free</TrialBtnDark>
-                    </div>
-                </Card>
-            </Cards>
-        </Enroll>
-    )
-}
+  return (
+    <Enroll>
+      <h2>Enroll to Jarka&#39;s Czech courses</h2>
+      <Cards>
+        <Card className="card">
+          <div className="card-header">
+            <p>Pay monthly</p>
+          </div>
+          <div className="card-body">
+            <h3>
+              <span className="price">$9</span>
+              <span className="per"> per month</span>
+            </h3>
+            <div className="line" />
+            <ul>
+              <li> Instant access to all of 13 courses (new added frequently)</li>
+              <li>Daily plan for training</li>
+              <li>Access to a private facebook group</li>
+              <li>Help of teachers</li>
+            </ul>
+            <ActionBtn variants={btnAnimation} initial="hidden" whileTap="tap">Enroll</ActionBtn>
+          </div>
+        </Card>
+        <Card>
+          <div className="card-header">
+            <p>Try for free</p>
+          </div>
+          <div className="card-body">
+            <h3>
+              <span className="price">$0</span>
+              <span className="per"> for 3 days</span>
+            </h3>
+            <div className="line" />
+            <ul>
+              <li> Access to all of 13 courses for 3 days (new added frequently)</li>
+              <li>Daily plan for training</li>
+              <li>&nbsp;</li>
+              <li>&nbsp;</li>
+            </ul>
+            <TrialBtnDark variants={btnAnimation} initial="hidden" whileTap="tap">Try for free</TrialBtnDark>
+          </div>
+        </Card>
+      </Cards>
+    </Enroll>
+  );
+};
 
 const Enroll = styled.div`
     padding: 2rem 2rem 5rem;
@@ -60,7 +66,7 @@ const Enroll = styled.div`
     @media (max-width: 500px){
         padding: 1.5rem 0rem 1rem;
     }
-`
+`;
 const Cards = styled.div`
     display: flex;
     justify-content: center;
@@ -68,7 +74,7 @@ const Cards = styled.div`
     @media (max-width: 1300px){
         display: block;
     }
-`
+`;
 const Card = styled.div`
     display: flex;
     flex-direction: column;

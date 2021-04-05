@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 
 export const Action = styled.div`
     display: flex;
@@ -23,7 +23,7 @@ export const Action = styled.div`
         flex-wrap: wrap;
     }
     
-`
+`;
 
 export const ActionBtn = styled(motion.button)`
     background-color: #eba31d;
@@ -36,7 +36,7 @@ export const ActionBtn = styled(motion.button)`
     &:active {
         background-color: "#e69807";
     }
-`
+`;
 
 export const TrialBtn = styled(motion.button)`
     background: transparent;
@@ -47,8 +47,8 @@ export const TrialBtn = styled(motion.button)`
         color: #e2e2e2;
         
     }
-`
-export const TrialBtnDark  = styled(motion.button)`
+`;
+export const TrialBtnDark = styled(motion.button)`
     background: transparent;
     border: 3px #525252 solid;
     color: #525252;
@@ -64,7 +64,7 @@ export const TrialBtnDark  = styled(motion.button)`
         color: #2b2b2b;
     }
 
-`
+`;
 
 export const StyledSection = styled.div`
     width: 80%;
@@ -82,7 +82,7 @@ export const StyledSection = styled.div`
         height: 5rem;
         margin-right: 1.4rem
     }
-`
+`;
 
 export const Advantages = styled.div`
     width: 70%;
@@ -91,14 +91,14 @@ export const Advantages = styled.div`
     @media (max-width: 1300px) {
         width: 90%;
     }
-`
+`;
 export const Advantage = styled.div`
     display: flex;
     margin-bottom: 3rem;
-`
+`;
 
 export const Line = styled.div`
     height: 0.2rem;
     width: 100%;
     background-image: linear-gradient(to right, #fff, #c2c2c2, #fff);
-`
+`;

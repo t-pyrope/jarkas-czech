@@ -1,36 +1,41 @@
 import React from 'react';
 import styled from 'styled-components';
-import {TrialBtnDark} from '../styles.js';
-import {motion} from 'framer-motion';
-import {cardAnimation, btnAnimation} from '../animation';
+import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
+import { TrialBtnDark } from '../styles';
+import { cardAnimation, btnAnimation } from '../animation';
 
-const TrialCard = ({setTrialActive}) => {
-    const exitCardHandler = (e) => {
-        if (e.target.classList.contains("wrapper")){
-            setTrialActive(false);
-        }
+const TrialCard = ({ setTrialActive }) => {
+  const exitCardHandler = (e) => {
+    if (e.target.classList.contains('wrapper')) {
+      setTrialActive(false);
     }
-    return(
-        <Wrapper className="wrapper" onClick={exitCardHandler}>
-            <Card className="card" variants={cardAnimation} initial="hidden" animate="show" exit="exit">
-                <div className="card-header">
-                    <p>Try for free for 3 days</p>
-                </div>
-                <div className="card-body">
-                    <h3>What you will get</h3>
-                    <div className="line"></div>
-                    <ul>
-                        <li> Access to all of 13 courses for 3 days (new added frequently)</li>
-                        <li>Daily plan for training</li>
-                        <li>&nbsp;</li>
-                        <li>&nbsp;</li>
-                    </ul>
-                    <TrialBtnDark variants={btnAnimation} initial="hidden" whileTap="tap">Try for free</TrialBtnDark>
-                </div>
-            </Card>
-        </Wrapper>
-    )
-}
+  };
+  return (
+    <Wrapper className="wrapper" onClick={exitCardHandler}>
+      <Card className="card" variants={cardAnimation} initial="hidden" animate="show" exit="exit">
+        <div className="card-header">
+          <p>Try for free for 3 days</p>
+        </div>
+        <div className="card-body">
+          <h3>What you will get</h3>
+          <div className="line" />
+          <ul>
+            <li> Access to all of 13 courses for 3 days (new added frequently)</li>
+            <li>Daily plan for training</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+          </ul>
+          <TrialBtnDark variants={btnAnimation} initial="hidden" whileTap="tap">Try for free</TrialBtnDark>
+        </div>
+      </Card>
+    </Wrapper>
+  );
+};
+
+TrialCard.propTypes = {
+  setTrialActive: PropTypes.func.isRequired,
+};
 
 const Wrapper = styled.div`
     position: fixed;
@@ -101,6 +106,6 @@ const Card = styled(motion.div)`
         margin-top: 1rem;
         margin-left: 0.3rem;
     }
-`
+`;
 
 export default TrialCard;

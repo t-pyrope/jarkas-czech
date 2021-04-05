@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {Switch, Route, useLocation} from 'react-router-dom';
+import React, { useState } from 'react';
+import { Switch, Route, useLocation } from 'react-router-dom';
 import GlobalStyles from './components/GlobalStyles';
 // pages
 import Nav from './components/Nav';
@@ -18,7 +18,12 @@ function App() {
       <Nav />
       <Switch location={location} key={location.pathname}>
         <Route path="/" exact>
-          <OurCourse enrollActive={enrollActive} setEnrollActive={setEnrollActive} trialActive={trialActive} setTrialActive={setTrialActive} />
+          <OurCourse
+            enrollActive={enrollActive}
+            setEnrollActive={setEnrollActive}
+            trialActive={trialActive}
+            setTrialActive={setTrialActive}
+          />
         </Route>
         <Route path="/team">
           <OurTeam />
@@ -29,6 +34,6 @@ function App() {
       </Switch>
     </div>
   );
-};
+}
 
 export default App;

@@ -1,41 +1,56 @@
 import React from 'react';
 import styled from 'styled-components';
-import italo from '../img/team-italo.jpg'
-import jarka from '../img/team-jarka.jpg'
-import olenka from '../img/team-olenka.jpg'
+import italo from '../img/team-italo.jpg';
+import jarka from '../img/team-jarka.jpg';
+import olenka from '../img/team-olenka.jpg';
 import ScrollTop from '../components/ScrollTop';
 
 const OurTeam = () => {
-    return(
-        <TeamStyled>
-            <h2>Our Team</h2>
-            <Cards>
-                <Card>
-                    <img src={jarka} alt="Jaroslava Vrbova" />
-                    <div className="card">
-                        <h4>Jaroslava Vrbová</h4>
-                        <p>Haven't we met before? The founder of this course and mother of two wonderful children. Likes to travel around the world</p>
-                    </div>
-                </Card>
-                <Card>
-                    <img src={italo} alt="Rinaldo Endrizzi" />
-                    <div className="card">
-                        <h4>Rinaldo Endrizzi</h4>
-                        <p>Two years ago fell in love with Prague at first side. Speaks excellent Czech. Want to check it? Enroll our course!</p>
-                    </div>
-                </Card>
-                <Card>
-                    <img src={olenka} alt="Maryna Lis" />
-                    <div className="card">
-                        <h4>Maryna Lis</h4>
-                        <p>One of the main and favorite teachers of our course. Also likes photography and modern dance.</p>
-                    </div>
-                </Card>
-            </Cards>
-            <ScrollTop />
-        </TeamStyled>
-    )
-}
+  return (
+    <TeamStyled>
+      <h2>Our Team</h2>
+      <Cards>
+        <Card>
+          <img src={jarka} alt="Jaroslava Vrbova" />
+          <div className="card">
+            <h4>Jaroslava Vrbová</h4>
+            <p>
+              Haven&#39;t we met before?
+              The founder of this course
+              and mother of two wonderful children.
+              Likes to travel around the world
+            </p>
+          </div>
+        </Card>
+        <Card>
+          <img src={italo} alt="Rinaldo Endrizzi" />
+          <div className="card">
+            <h4>Rinaldo Endrizzi</h4>
+            <p>
+              Two years ago fell in love
+              with Prague at first side.
+              Speaks excellent Czech.
+              Want to check it?
+              Join our course!
+            </p>
+          </div>
+        </Card>
+        <Card>
+          <img src={olenka} alt="Maryna Lis" />
+          <div className="card">
+            <h4>Maryna Lis</h4>
+            <p>
+              One of the main and
+              favorite teachers of our course.
+              Also likes photography and modern dance.
+            </p>
+          </div>
+        </Card>
+      </Cards>
+      <ScrollTop />
+    </TeamStyled>
+  );
+};
 
 const TeamStyled = styled.div`
     width: 90%;
@@ -45,12 +60,12 @@ const TeamStyled = styled.div`
         text-align: center;
         margin-bottom: 2rem;
     }
-`
+`;
 const Cards = styled.div`
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-`
+`;
 
 const Card = styled.div`
     width: 25%;
@@ -104,6 +119,6 @@ const Card = styled.div`
             transform: translateY(0rem);
         }
     }
-`
+`;
 
 export default OurTeam;
