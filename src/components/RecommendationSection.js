@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import RecommendationsState from '../recommendations';
-import { Action, ActionBtn, TrialBtn } from '../styles';
-import { btnAnimation } from '../animation';
+import ButtonGroup from './ButtonGroup';
 
 const RecommendationSection = ({ setEnrollActive, setTrialActive }) => {
   const [recs] = useState(RecommendationsState);
@@ -18,10 +17,8 @@ const RecommendationSection = ({ setEnrollActive, setTrialActive }) => {
           <Recommendation className="single-rec" author={rec.name} image={rec.img} text={rec.text} key={rec.img} />
         ))}
       </Recommendations>
-      <Action>
-        <ActionBtn onClick={() => { setEnrollActive(true); }} variants={btnAnimation} initial="hidden" whileTap="tap">Enroll</ActionBtn>
-        <TrialBtn onClick={() => setTrialActive(true)} variants={btnAnimation} initial="hidden" whileTap="tap">Try for free</TrialBtn>
-      </Action>
+      <ButtonGroup trialColor="white" setEnrollActive={setEnrollActive} setTrialActive={setTrialActive} />
+
     </RecStyled>
   );
 };

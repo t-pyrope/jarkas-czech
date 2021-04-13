@@ -71,6 +71,10 @@ const GlobalStyles = createGlobalStyle`
         }
     }
 
+    h4 {
+        font-size: 1.2rem;
+    }
+
     ul {
         list-style: none;
     }

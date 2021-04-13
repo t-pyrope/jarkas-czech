@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import main from '../img/main.jpg';
-import { Action, ActionBtn, TrialBtnDark } from '../styles';
-import { btnAnimation } from '../animation';
+import ButtonGroup from './ButtonGroup';
 
 const CourseSection = ({ setEnrollActive, setTrialActive }) => {
   return (
@@ -25,10 +24,7 @@ const CourseSection = ({ setEnrollActive, setTrialActive }) => {
           </h2>
         </div>
         <p>Start to work on your pronunciation today and get rid of your accent!</p>
-        <Action>
-          <ActionBtn onClick={() => { setEnrollActive(true); }} variants={btnAnimation} initial="hidden" whileTap="tap">Enroll</ActionBtn>
-          <TrialBtnDark onClick={() => setTrialActive(true)} variants={btnAnimation} initial="hidden" whileTap="tap">Try for free</TrialBtnDark>
-        </Action>
+        <ButtonGroup trialColor="dark" setEnrollActive={setEnrollActive} setTrialActive={setTrialActive} />
       </Welcome>
     </Course>
   );

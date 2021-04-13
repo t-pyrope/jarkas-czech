@@ -38,6 +38,14 @@ export const ActionBtn = styled(motion.button)`
     }
 `;
 
+export const ActionCenter = styled(Action)`
+    justify-content: center;
+
+    @media (max-width: 500px) {
+    flex-wrap: wrap;
+    }
+`;
+
 export const TrialBtn = styled(motion.button)`
     background: transparent;
     border: 3px white solid;
