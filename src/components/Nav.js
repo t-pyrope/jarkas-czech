@@ -75,8 +75,10 @@ const NavStyled = styled(motion.nav)`
           height: inherit;
           display: flex;
           align-items: center;
+          font-weight: bold;
+          transition: all 0.4s ease;
           &:hover {
-            transform: translateY(-5%);
+            color: #d6d6d6;
           }
         }
     }
@@ -108,7 +110,7 @@ const Line = styled(motion.div)`
     height: 2px;
     background-color: #324739;
     position: absolute;
-    bottom: -15%;
+    bottom: -5%;
     margin: auto;
 `;
 

@@ -21,7 +21,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     h1 {
-        font-family: 'Oleo Script Swash Caps', cursive;
+        font-family: 'Rozha One', serif;;
         font-size: 1.7rem;
     }
 
