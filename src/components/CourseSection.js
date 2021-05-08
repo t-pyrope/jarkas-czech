@@ -54,7 +54,7 @@ const Course = styled.div`
 
     h2 {
         color: #525252;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.3rem;
 
         @media (max-width: 500px){
             margin-bottom: 0.3rem;
@@ -100,7 +100,7 @@ const Welcome = styled.div`
     }
     p {
         font-size: 1.2rem;
-        padding: 0rem 0.5rem;
+        padding-bottom: 0.7rem;
     }
     span {
         font-weight: 900;

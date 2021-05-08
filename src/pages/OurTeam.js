@@ -98,7 +98,7 @@ const Card = styled.div`
         flex-direction: column;
 
         h4 {
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             font-size: 1.5rem;
             transform: translateY(2rem);
             transition: all 0.4s ease;

@@ -13,7 +13,7 @@ const AdvantagesSection = ({ setEnrollActive, setTrialActive }) => {
     },
     {
       header: 'Great first impression',
-      text: 'Don&#39;t wait til people get to know you, make them impressed from the first moment',
+      text: "Don't wait til people get to know you, make them impressed from the first moment",
     },
     {
       header: 'Investment to your self-confidence',

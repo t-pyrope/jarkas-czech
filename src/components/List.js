@@ -18,13 +18,12 @@ const List = ({ icon, objArr }) => {
   return (
     <Advantages>
       {objArr.map((obj) => (
-        <Advantage>
+        <Advantage key={obj.header}>
           <img src={iconHandler(icon)} alt={icon} />
           <div className="description">
             <h4>{obj.header}</h4>
             <p>{obj.text}</p>
           </div>
-
         </Advantage>
       ))}
     </Advantages>

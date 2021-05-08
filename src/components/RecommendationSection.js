@@ -88,7 +88,7 @@ const RecStyle = styled.div`
     }
 
     h4 {
-        margin-bottom: 1rem;
+        margin-bottom: 0.8rem;
         text-align: center;
     }
     p {

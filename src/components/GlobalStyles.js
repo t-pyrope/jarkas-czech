@@ -28,7 +28,7 @@ const GlobalStyles = createGlobalStyle`
     button {
         cursor: pointer;
         font-family: 'Lato', sans-serif;
-        padding: 1rem 2rem;
+        padding: 0.7rem 2rem;
         border: none;
         font-size: 1rem;
         color: white;
@@ -36,6 +36,7 @@ const GlobalStyles = createGlobalStyle`
         text-transform: uppercase;
         transition: all 0.4s ease-in-out;
         transition-property: background-color, color;
+        border-radius: 0.4rem;
 
         &:focus, &:active {
             outline: none;
@@ -73,6 +74,7 @@ const GlobalStyles = createGlobalStyle`
 
     h4 {
         font-size: 1.2rem;
+        margin-bottom: 0.2rem;
     }
 
     ul {

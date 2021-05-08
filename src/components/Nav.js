@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { Link, useLocation } from 'react-router-dom';
@@ -18,6 +19,9 @@ const Nav = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', scrollHandler);
+    return () => {
+      window.removeEventListener('scroll', scrollHandler);
+    };
   }, []);
 
   return (
@@ -48,7 +52,7 @@ const NavStyled = styled(motion.nav)`
     justify-content: space-between;
     min-height: 10vh;
     margin: auto;
-    align-items: center;
+    align-items: stretch;
     background-color: #82BBD6;
     color: white;
     padding: 1rem 10rem;
@@ -58,11 +62,23 @@ const NavStyled = styled(motion.nav)`
 
     ul {
         display: flex;
+        height: inherit;
     }
 
     li{
         padding-left: 5rem;
         position: relative;
+        height: 100%;
+        a {
+          display: block;
+          transition: all 0.3s ease;
+          height: inherit;
+          display: flex;
+          align-items: center;
+          &:hover {
+            transform: translateY(-5%);
+          }
+        }
     }
 
     @media (max-width: 1300px) {
@@ -92,9 +108,8 @@ const Line = styled(motion.div)`
     height: 2px;
     background-color: #324739;
     position: absolute;
-    bottom: -35%;
+    bottom: -15%;
     margin: auto;
-    
 `;
 
 export default Nav;

@@ -6,6 +6,7 @@ import Nav from './components/Nav';
 import OurCourse from './pages/OurCourse';
 import OurTeam from './pages/OurTeam';
 import ContactUs from './pages/ContactUs';
+import Footer from './components/Footer';
 
 function App() {
   const location = useLocation();
@@ -32,6 +33,7 @@ function App() {
           <ContactUs />
         </Route>
       </Switch>
+      <Footer />
     </div>
   );
 }

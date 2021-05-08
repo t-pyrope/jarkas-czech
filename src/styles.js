@@ -30,11 +30,7 @@ export const ActionBtn = styled(motion.button)`
     border: none;
 
     &:hover {
-        background-color: #dd9716;
-    }
-
-    &:active {
-        background-color: "#e69807";
+        background-color: #e28306;
     }
 `;
 
@@ -47,13 +43,12 @@ export const ActionCenter = styled(Action)`
 `;
 
 export const TrialBtn = styled(motion.button)`
-    background: transparent;
-    border: 3px white solid;
+    background-color: transparent;
+    border: 3px solid white;
 
     &:hover {
-        border: 3px #e2e2e2 solid;
-        color: #e2e2e2;
-        
+        background-color: white;
+        color: #525252;
     }
 `;
 export const TrialBtnDark = styled(motion.button)`
@@ -63,15 +58,10 @@ export const TrialBtnDark = styled(motion.button)`
     white-space: nowrap;
 
     &:hover {
-        border: 3px #2e2e2e solid;
-        color: #2e2e2e;
+        background: #525252;
+        border: 3px #525252 solid;
+        color: white;
     }
-
-    &:active {
-        border: 3px #2b2b2b solid;
-        color: #2b2b2b;
-    }
-
 `;
 
 export const StyledSection = styled.div`
