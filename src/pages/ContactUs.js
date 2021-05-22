@@ -57,13 +57,17 @@ const ContactUs = () => {
             <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer"><img src={facebook} alt="facebook" /></a>
           </div>
           <Line />
-          <div className="address">
-            <p>Jarka&#39;s Czech</p>
-            <p>Václavské náměstí, </p>
-            <p>110 00 Nové Město</p>
-            <p>+420 123 456 789</p>
-            <p>service@jarkasczech.cz</p>
-          </div>
+          <address>
+            <strong>Jarka&#39;s Czech</strong>
+            <br />
+            Václavské náměstí
+            <br />
+            110 00 Nové Město
+            <br />
+            <a href="tel:+420123456789">+420 123 456 789</a>
+            <br />
+            <a href="mailto:service@jarkasczech.cz">service@jarkasczech.cz</a>
+          </address>
         </Info>
         <Form>
           <form id="contact-form" onSubmit={(e) => submitHandler(e)}>
@@ -126,6 +130,16 @@ const Info = styled.div`
         width: 2.5rem;
         height: 2.5rem;
         margin: 1rem 1rem 0rem 0rem;
+    }
+
+    address {
+      line-height: 1.7rem;
+      font-style: normal;
+
+      a {
+        color: inherit;
+        text-decoration: underline;
+      }
     }
 `;
 
