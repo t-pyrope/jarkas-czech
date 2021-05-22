@@ -19,7 +19,7 @@ const List = ({ icon, objArr }) => {
     <Advantages>
       {objArr.map((obj) => (
         <Advantage key={obj.header}>
-          <img src={iconHandler(icon)} alt={icon} />
+          <img src={iconHandler(icon)} alt="" />
           <div className="description">
             <h4>{obj.header}</h4>
             <p>{obj.text}</p>

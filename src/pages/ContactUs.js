@@ -95,7 +95,7 @@ const ContactUs = () => {
   );
 };
 
-const ContactStyled = styled.div`
+const ContactStyled = styled.main`
     width: 90%;
     min-height: 90vh;
     margin: 0rem auto;

@@ -52,7 +52,7 @@ const OurTeam = () => {
   );
 };
 
-const TeamStyled = styled.div`
+const TeamStyled = styled.main`
     width: 90%;
     margin: 1rem auto;
 

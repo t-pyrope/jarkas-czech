@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import CourseSection from '../components/CourseSection';
 import AdvantagesSection from '../components/AdvantagesSection';
@@ -14,7 +13,7 @@ const OurCourse = ({
   enrollActive, setEnrollActive, trialActive, setTrialActive,
 }) => {
   return (
-    <CourseStyled>
+    <main>
       {enrollActive ? <EnrollCard setEnrollActive={setEnrollActive} /> : ''}
       {trialActive ? <TrialCard setTrialActive={setTrialActive} /> : ''}
       <CourseSection setEnrollActive={setEnrollActive} setTrialActive={setTrialActive} />
@@ -23,7 +22,7 @@ const OurCourse = ({
       <ExpectSection setEnrollActive={setEnrollActive} setTrialActive={setTrialActive} />
       <EnrollSection />
       <ScrollTop />
-    </CourseStyled>
+    </main>
   );
 };
 
@@ -33,8 +32,5 @@ OurCourse.propTypes = {
   setEnrollActive: PropTypes.func.isRequired,
   setTrialActive: PropTypes.func.isRequired,
 };
-
-const CourseStyled = styled.div`
-`;
 
 export default OurCourse;
