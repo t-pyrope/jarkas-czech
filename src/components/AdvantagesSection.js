@@ -26,7 +26,7 @@ const AdvantagesSection = ({ setEnrollActive, setTrialActive }) => {
   ];
 
   return (
-    <StyledAdvantages>
+    <StyledAdvantages aria-label="Benefits of the course">
       <div className="headline">
         <h2>What are the benefits of the course?</h2>
         <p>

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Footer = () => {
   return (
     <FooterStyled>
-      <p>&copy; Jarka&#39;s Czech</p>
+      <small>&copy; Jarka&#39;s Czech</small>
     </FooterStyled>
   );
 };

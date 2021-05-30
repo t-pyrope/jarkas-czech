@@ -1,12 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import main from '../img/main.jpg';
+import mainH564W700 from '../img/main-h564-w700.jpg';
+import mainH1050W700 from '../img/main-h1050-w700.jpg';
+import mainH2000W1333 from '../img/main-h2000-w1333.jpg';
 import ButtonGroup from './ButtonGroup';
 
 const CourseSection = ({ setEnrollActive, setTrialActive }) => {
   return (
-    <Course>
+    <Course aria-label="intro to course">
       <div className="parallax" />
       <Welcome>
         <div className="title">
@@ -35,7 +37,7 @@ CourseSection.propTypes = {
   setTrialActive: PropTypes.func.isRequired,
 };
 
-const Course = styled.div`
+const Course = styled.section`
     min-height: 90vh;
     width: 100%;
     position: relative;
@@ -43,13 +45,22 @@ const Course = styled.div`
         position: absolute;
         top: 0;
         left: 0;
-        background: url(${main});
+        background: url(${mainH2000W1333});
         width: 100%;
         height: 100%;
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+
+        @media (max-width: 700px) {
+            background: url(${mainH1050W700})
+        }
+
+        @media (max-width: 564px) and (max-height: 700px) {
+            background: url(${mainH564W700})
+        }
+
     }
 
     h2 {

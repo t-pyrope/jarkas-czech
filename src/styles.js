@@ -64,7 +64,7 @@ export const TrialBtnDark = styled(motion.button)`
     }
 `;
 
-export const StyledSection = styled.div`
+export const StyledSection = styled.section`
     width: 80%;
     margin: 4rem auto;
     min-height: 35vh;

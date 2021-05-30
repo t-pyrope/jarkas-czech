@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import { TrialBtnDark } from '../styles';
 import { cardAnimation, btnAnimation } from '../animation';
+import cancel from '../img/cancel.png';
 
 const TrialCard = ({ setTrialActive }) => {
   const exitCardHandler = (e) => {
@@ -16,6 +17,9 @@ const TrialCard = ({ setTrialActive }) => {
       <Card className="card" variants={cardAnimation} initial="hidden" animate="show" exit="exit">
         <div className="card-header">
           <p>Try for free for 3 days</p>
+          <button type="button" aria-label="go back" onClick={() => setTrialActive(false)}>
+            <img src={cancel} alt="" />
+          </button>
         </div>
         <div className="card-body">
           <h3>What you will get</h3>
@@ -70,11 +74,24 @@ const Card = styled(motion.div)`
         text-transform: uppercase;
         font-weight: bold;
         font-size: 1.6rem;
+        display: flex;
+        justify-content: space-between;
         p {
             margin-top: 1rem;
             margin-bottom: 1rem;
             color: white;
             margin-left: 1.3rem;
+        }
+
+        button {
+          background: transparent;
+          border: none;
+          img {
+            width: 1rem;
+            height: 1rem;
+            mix-blend-mode: initial;
+            transition: all 0.4s ease-in-out;
+          }
         }
     }
 

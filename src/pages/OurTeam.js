@@ -7,7 +7,7 @@ import ScrollTop from '../components/ScrollTop';
 
 const OurTeam = () => {
   return (
-    <TeamStyled>
+    <TeamStyled role="main">
       <h2>Our Team</h2>
       <Cards>
         <Card>
@@ -67,7 +67,7 @@ const Cards = styled.div`
     flex-wrap: wrap;
 `;
 
-const Card = styled.div`
+const Card = styled.article`
     width: 25%;
     min-width: 20rem;
     position: relative;

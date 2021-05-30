@@ -8,7 +8,7 @@ const RecommendationSection = ({ setEnrollActive, setTrialActive }) => {
   const [recs] = useState(RecommendationsState);
 
   return (
-    <RecStyled>
+    <RecStyled aria-label="testimonials">
       <div className="title">
         <h2>What our students say</h2>
       </div>
@@ -23,7 +23,7 @@ const RecommendationSection = ({ setEnrollActive, setTrialActive }) => {
   );
 };
 
-const RecStyled = styled.div`
+const RecStyled = styled.section`
     width: 100%;
     padding: 4rem 10rem;
     color: white;

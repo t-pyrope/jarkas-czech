@@ -122,15 +122,15 @@ h3 {
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
-}
+  }
 
-.price {
-    font-size: 6rem;
-}
+  .price {
+      font-size: 6rem;
+  }
 
-.per {
-    margin-top: 1rem;
-    margin-left: 0.3rem;
-}
+  .per {
+      margin-top: 1rem;
+      margin-left: 0.3rem;
+  }
 `;
 export default EnrollSection;

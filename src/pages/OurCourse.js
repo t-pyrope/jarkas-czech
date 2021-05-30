@@ -13,7 +13,7 @@ const OurCourse = ({
   enrollActive, setEnrollActive, trialActive, setTrialActive,
 }) => {
   return (
-    <main>
+    <main role="main">
       {enrollActive ? <EnrollCard setEnrollActive={setEnrollActive} /> : ''}
       {trialActive ? <TrialCard setTrialActive={setTrialActive} /> : ''}
       <CourseSection setEnrollActive={setEnrollActive} setTrialActive={setTrialActive} />

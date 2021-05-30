@@ -22,7 +22,7 @@ const ExpectSection = ({ setEnrollActive, setTrialActive }) => {
   ];
 
   return (
-    <ExpectStyled>
+    <ExpectStyled aria-label="what you get from our course">
       <h2>What can you expect from enrolment?</h2>
       <List icon="medal" objArr={texts} />
       <ButtonGroup trialColor="dark" setEnrollActive={setEnrollActive} setTrialActive={setTrialActive} />
