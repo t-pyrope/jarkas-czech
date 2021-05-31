@@ -80,6 +80,19 @@ export const StyledSection = styled.section`
         height: 5rem;
         margin-right: 1.4rem
     }
+
+    @media (max-width: 1300px) {
+        width: 90%;
+    }
+
+    @media (max-width: 768px) {
+        width: 96%;
+        margin: 2rem auto;
+    }
+
+    h2 {
+        margin-bottom: 1rem;
+    }
 `;
 
 export const Advantages = styled.div`
@@ -89,10 +102,18 @@ export const Advantages = styled.div`
     @media (max-width: 1300px) {
         width: 90%;
     }
+
+    @media (max-width: 768px) {
+        width: 96%;
+    }
 `;
 export const Advantage = styled.div`
     display: flex;
     margin-bottom: 3rem;
+
+    @media (max-width: 7680px) {
+        margin-bottom: 1.5rem;
+    }
 `;
 
 export const Line = styled.div`

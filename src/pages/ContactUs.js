@@ -176,6 +176,10 @@ const Form = styled.div`
         background-color: #f7f4f3;
         border-bottom: solid 2px #474443;
     }
+
+    @media (max-width: 500px) {
+      margin-bottom: 2rem;
+    }
 `;
 
 export default ContactUs;

@@ -112,12 +112,16 @@ const RecStyle = styled.div`
     }
     @media (max-width: 500px){
         flex-direction: column;
-        margin: 1rem auto 1rem auto;
+        margin: 2rem auto;
         .description {
             margin-left: 0;
         }
         p, h4 {
             text-align: center;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
         }
     }
 `;

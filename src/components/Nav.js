@@ -63,6 +63,9 @@ const NavStyled = styled(motion.nav)`
     ul {
         display: flex;
         height: inherit;
+        @media (max-width: 768px){
+          margin-left: 0.5rem;
+        }
     }
 
     li{
@@ -92,16 +95,15 @@ const NavStyled = styled(motion.nav)`
     }
 
     @media (max-width: 768px){
-        padding: 1rem 2rem;
+        padding: 0.7rem 0.5rem;
 
-        li:first-child{
-            padding-left: 0rem;
+        li{
+            padding-left: 0.8rem;
         }
     }
 
     @media (max-width: 320px) {
         display: block;
-        padding: 0.5rem 1rem;
     }
 `;
 
