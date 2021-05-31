@@ -86,8 +86,7 @@ export const StyledSection = styled.section`
     }
 
     @media (max-width: 768px) {
-        width: 96%;
-        margin: 2rem auto;
+        margin: 3rem auto;
     }
 
     h2 {
