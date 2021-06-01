@@ -45,20 +45,28 @@ const Course = styled.section`
         position: absolute;
         top: 0;
         left: 0;
-        background: url(${mainH2000W1333});
+        background:
+            url(${mainH2000W1333})
+            center / cover
+            no-repeat
+            fixed;
         width: 100%;
         height: 100%;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
 
         @media (max-width: 700px) {
-            background: url(${mainH1050W700})
+            background:
+                url(${mainH1050W700})
+                center / cover
+                no-repeat
+                fixed;
         }
 
-        @media (max-width: 564px) and (max-height: 700px) {
-            background: url(${mainH564W700})
+        @media (max-width: 564px) and (orientation: portrait) {
+            background:
+                url(${mainH564W700})
+                center / cover
+                no-repeat
+                fixed;
         }
 
     }
