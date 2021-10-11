@@ -40,7 +40,7 @@ const RecStyled = styled.section`
         margin-bottom: 3rem;
     }
 
-    @media (max-width: 1300px){
+    @media (max-width: 1200px){
         padding: 4rem 2rem;
 
         h2 {
@@ -67,7 +67,7 @@ const Recommendations = styled.div`
     justify-content: space-around;
     margin-bottom: 3rem;
 
-    @media (max-width: 1300px){
+    @media (max-width: 1200px){
         display: block;
 
     }
@@ -96,7 +96,7 @@ const RecStyle = styled.div`
         font-style: italic;
     }
 
-    @media (max-width: 1300px){
+    @media (max-width: 1200px){
         width: 80%;
         flex-direction: row;
         margin: 3rem auto;
@@ -110,6 +110,7 @@ const RecStyle = styled.div`
             text-align: left;
         }
     }
+
     @media (max-width: 500px){
         flex-direction: column;
         margin: 2rem auto;

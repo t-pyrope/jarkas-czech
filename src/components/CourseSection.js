@@ -12,18 +12,18 @@ const CourseSection = ({ setEnrollActive, setTrialActive }) => {
       <div className="parallax" />
       <Welcome>
         <div className="title">
-          <h2>Do you want to </h2>
-          <h2>sound like</h2>
-          <h2>
-            a
-            {' '}
-            <span>native speaker</span>
-            {' '}
-            in
-            {' '}
-            <span>Czech</span>
-            ?
-          </h2>
+            <h2>Do you want to </h2>
+            <h2>
+                <span>sound</span>
+                {' '}
+                like
+            </h2>
+            <h2>
+                a native speaker in
+                {' '}
+                <span>Czech</span>
+                ?
+            </h2>
         </div>
         <p>Start to work on your pronunciation today and get rid of your accent!</p>
         <ButtonGroup trialColor="dark" setEnrollActive={setEnrollActive} setTrialActive={setTrialActive} />

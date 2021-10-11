@@ -77,13 +77,13 @@ export const TrialBtnDark = styled.button`
 
 export const StyledSection = styled.section`
     width: 80%;
-    margin: 4rem auto;
+    margin: 5rem auto 6rem;
     min-height: 35vh;
     display: flex;
     flex-direction: column;
 
     h2 {
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
     }
 
     img{
@@ -98,10 +98,6 @@ export const StyledSection = styled.section`
 
     @media (max-width: 768px) {
         margin: 3rem auto;
-    }
-
-    h2 {
-        margin-bottom: 1rem;
     }
 `;
 
@@ -119,9 +115,9 @@ export const Advantages = styled.div`
 `;
 export const Advantage = styled.div`
     display: flex;
-    margin-bottom: 3rem;
+    margin-bottom: 1.8rem;
 
-    @media (max-width: 7680px) {
+    @media (max-width: 768px) {
         margin-bottom: 1.5rem;
     }
 `;

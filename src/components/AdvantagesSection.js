@@ -58,6 +58,10 @@ const StyledAdvantages = styled(StyledSection)`
     margin-right: 1.4rem;
   }
 
+  h2 {
+    margin-bottom: 0.7rem;
+  }
+
   .headline {
     text-align: center;
     margin-bottom: 3rem;
