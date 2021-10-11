@@ -65,17 +65,17 @@ const Cards = styled.div`
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    padding-bottom: 2rem;
 `;
 
 const Card = styled.article`
-    width: 25%;
-    min-width: 20rem;
     position: relative;
     overflow: hidden;
-    margin-bottom: 2rem;
 
     img {
-        width: 100%;
+        width: 288px;
+        height: 384px;
+        background-color: #ebebeb;
     }
 
     &:hover > Description {
@@ -86,7 +86,7 @@ const Card = styled.article`
         position: absolute;
         width: 100%;
         height: 100%;
-        bottom: 0%;
+        bottom: 3px;
         background: rgba(0,0,0,0.5);
         color: white;
         padding: 1.5rem 1rem;
