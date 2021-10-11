@@ -102,14 +102,14 @@ const ContactStyled = styled.main`
 
     h2 {
         text-align: center;
-        margin-top: 2rem;
+        margin-top: 2.5rem;
     }
 `;
 
 const Columns = styled.div`
     display: flex;
     justify-content: space-evenly;
-    padding: 2rem 0rem 0rem;
+    padding: 2.5rem 0rem 0rem;
 
     @media (max-width: 500px){
         display: block;

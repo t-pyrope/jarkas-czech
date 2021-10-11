@@ -72,7 +72,7 @@ const Course = styled.section`
     }
 
     h2 {
-        color: #525252;
+        color: #2e2e2e;
         margin-bottom: 0.3rem;
 
         @media (max-width: 500px){
@@ -105,7 +105,6 @@ const Welcome = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #525252;
     background-color: white;
     padding: 2rem;
     .title, p {
