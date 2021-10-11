@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 
 export const Action = styled.div`
     display: flex;
     justify-content: flex-start;
-    button {
-        margin-right: 2rem;
+    button:first-child {
+        margin-right: 0.5rem;
     }
+
     @media (max-width: 1300px) {
         display: block;
         margin: 0rem auto;
@@ -25,12 +25,18 @@ export const Action = styled.div`
     
 `;
 
-export const ActionBtn = styled(motion.button)`
-    background-color: #eba31d;
+export const ActionBtn = styled.button`
+    background-color: #E65100;
     border: none;
+    box-shadow: 0px 3px 3px rgba(0,0,0,0.15);
+    padding: 0.7rem 2rem;
 
     &:hover {
-        background-color: #e28306;
+        background-color: #d84315;
+    }
+
+    &:active {
+        background-color: #bf360c;
     }
 `;
 
@@ -38,29 +44,34 @@ export const ActionCenter = styled(Action)`
     justify-content: center;
 
     @media (max-width: 500px) {
-    flex-wrap: wrap;
+        flex-wrap: wrap;
     }
 `;
 
-export const TrialBtn = styled(motion.button)`
+export const TrialBtn = styled.button`
     background-color: transparent;
-    border: 3px solid white;
 
     &:hover {
-        background-color: white;
-        color: #525252;
+        background-color: rgba(0,0,0,0.1);
+    }
+
+    &:active {
+        background-color: rgba(0,0,0,0.15);
     }
 `;
-export const TrialBtnDark = styled(motion.button)`
+
+export const TrialBtnDark = styled.button`
     background: transparent;
-    border: 3px #525252 solid;
-    color: #525252;
+    border-bottom: 2px transparent solid;
+    color: #383838;
     white-space: nowrap;
 
     &:hover {
-        background: #525252;
-        border: 3px #525252 solid;
-        color: white;
+        background: #e6e6e6;
+    }
+
+    &:active {
+        background: #dfdfdf;
     }
 `;
 

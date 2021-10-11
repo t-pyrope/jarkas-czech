@@ -28,13 +28,13 @@ const GlobalStyles = createGlobalStyle`
     button {
         cursor: pointer;
         font-family: 'Lato', sans-serif;
-        padding: 0.7rem 2rem;
+        padding: 0.7rem 1.5rem;
         border: none;
         font-size: 1rem;
         color: white;
         font-weight: 900;
         text-transform: uppercase;
-        transition: all 0.4s ease-in-out;
+        transition: all 250ms ease-in-out;
         transition-property: background-color, color;
         border-radius: 0.4rem;
 
@@ -58,7 +58,6 @@ const GlobalStyles = createGlobalStyle`
 
     h2 {
         font-size: 3rem;
-        color: #313131;
 
         @media (max-width: 1300px){
             font-size: 2.6rem;
