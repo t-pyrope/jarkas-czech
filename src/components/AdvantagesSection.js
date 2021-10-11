@@ -35,7 +35,12 @@ const AdvantagesSection = ({ setEnrollActive, setTrialActive }) => {
         </p>
       </div>
       <List icon="thumbsUp" objArr={texts} />
-      <ButtonGroup trialColor="dark" setEnrollActive={setEnrollActive} setTrialActive={setTrialActive} />
+      <ButtonGroup
+        trialColor="dark"
+        setEnrollActive={setEnrollActive}
+        setTrialActive={setTrialActive}
+        styles={{marginTop: '1.5rem'}}
+      />
 
     </StyledAdvantages>
   );

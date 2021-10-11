@@ -4,9 +4,12 @@ import {
   ActionCenter, ActionBtn, TrialBtnDark, TrialBtn,
 } from '../styles';
 
-const ButtonGroup = ({ trialColor, setEnrollActive, setTrialActive }) => {
+const ButtonGroup = ({
+  trialColor, setEnrollActive,
+  setTrialActive, styles
+}) => {
   return (
-    <ActionCenter>
+    <ActionCenter style={styles ?? {}}>
       <ActionBtn
         onClick={() => {
           setEnrollActive(true);
