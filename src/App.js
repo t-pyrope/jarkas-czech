@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense } from 'react';
 import { Switch, Route, useLocation } from 'react-router-dom';
 import GlobalStyles from './components/GlobalStyles';
-// pages
+// components
 import Nav from './components/Nav';
-import OurCourse from './pages/OurCourse';
-import OurTeam from './pages/OurTeam';
-import ContactUs from './pages/ContactUs';
 import Footer from './components/Footer';
+// pages
+import OurCourse from './pages/OurCourse';
+const OurTeam = React.lazy(() => import('./pages/OurTeam'));
+const ContactUs = React.lazy(() => import('./pages/ContactUs'));
 
 function App() {
   const location = useLocation();
@@ -26,12 +27,14 @@ function App() {
             setTrialActive={setTrialActive}
           />
         </Route>
-        <Route path="/team">
-          <OurTeam />
-        </Route>
-        <Route path="/contacts">
-          <ContactUs />
-        </Route>
+        <Suspense fallback={<div style={{ minHeight: '100vh' }}/>}>
+          <Route path="/team">
+              <OurTeam />
+          </Route>
+          <Route path="/contacts">
+            <ContactUs />
+          </Route>
+        </Suspense>
       </Switch>
       <Footer />
     </div>
