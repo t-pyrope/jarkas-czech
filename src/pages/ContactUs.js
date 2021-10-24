@@ -11,7 +11,7 @@ const ContactUs = () => {
   const [email, setEmail] = useState('');
   const [senderName, setSenderName] = useState('');
   const [messageText, setMessageText] = useState('');
-  const [fullMessage, setFullMessage] = useState({ name: null, email: null, text: null });
+  const [fullMessage, setFullMessage] = useState({ name: '', email: '', text: '' });
 
   const inputHandler = (e) => {
     switch (e.target.name) {
@@ -51,10 +51,34 @@ const ContactUs = () => {
         <Info>
           <div className="social">
             <h4>Follow us on social media!</h4>
-            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><img src={twitter} alt="twitter" /></a>
-            <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer"><img src={youtube} alt="youtube" /></a>
-            <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"><img src={instagram} alt="instagram" /></a>
-            <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer"><img src={facebook} alt="facebook" /></a>
+            <a
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={twitter} alt="twitter" />
+            </a>
+            <a
+              href="https://youtube.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={youtube} alt="youtube" />
+            </a>
+            <a
+              href="https://instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={instagram} alt="instagram" />
+            </a>
+            <a
+              href="https://facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={facebook} alt="facebook" />
+            </a>
           </div>
           <Line />
           <address>
@@ -73,19 +97,46 @@ const ContactUs = () => {
           <form id="contact-form" onSubmit={(e) => submitHandler(e)}>
             <div className="name">
               <label htmlFor="name">
-                <input type="text" placeholder="Name" name="name" id="name_input" value={senderName} onChange={inputHandler} required />
+                <input
+                  type="text"
+                  placeholder="Name"
+                  name="name"
+                  id="name_input"
+                  value={senderName}
+                  onChange={inputHandler}
+                  required
+                />
               </label>
             </div>
             <div className="email">
               <label htmlFor="email">
-                <input type="email" placeholder="Email" name="email" id="email_input" value={email} onChange={inputHandler} required />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  name="email"
+                  id="email_input"
+                  value={email}
+                  onChange={inputHandler}
+                  required
+                />
               </label>
             </div>
             <div className="message">
-              <textarea name="message" placeholder="Your message" id="message_input" cols="30" rows="5" value={messageText} onChange={inputHandler} required />
+              <textarea
+                name="message"
+                placeholder="Your message"
+                id="message_input"
+                cols="30"
+                rows="5"
+                value={messageText}
+                onChange={inputHandler}
+                required
+              />
             </div>
             <div className="submit">
-              <ActionBtn type="submit">Send Message</ActionBtn>
+              <ActionBtn type="submit">
+                Send Message
+              </ActionBtn>
             </div>
           </form>
         </Form>
