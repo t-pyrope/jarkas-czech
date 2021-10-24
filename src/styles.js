@@ -31,8 +31,28 @@ export const ActionBtn = styled.button`
     box-shadow: 0px 3px 3px rgba(0,0,0,0.15);
     padding: 0.7rem 2rem;
 
-    &:hover {
-        background-color: #d84315;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #666666;
+        transform: scale(0.1);
+        opacity: 0;
+        mix-blend-mode: overlay;
+        border-radius: 0.4rem;
+        transition:
+            transform 300ms,
+            opacity 300ms,
+            background-color 300ms;
+    }
+
+    &:hover::before,
+    &:focus::before {
+        opacity: 1;
+        transform: scale(1);
     }
 
     &:active {
@@ -51,12 +71,31 @@ export const ActionCenter = styled(Action)`
 export const TrialBtn = styled.button`
     background-color: transparent;
 
-    &:hover {
-        background-color: rgba(0,0,0,0.1);
-    }
-
     &:active {
         background-color: rgba(0,0,0,0.15);
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.1);
+        transform: scale(0.1);
+        border-radius: 0.4rem;
+        opacity: 0;
+        transition:
+            transform 300ms,
+            opacity 300ms,
+            background-color 300ms;
+    }
+
+    &:hover::before,
+    &:focus::before {
+        opacity: 1;
+        transform: scale(1);
     }
 `;
 
@@ -66,8 +105,28 @@ export const TrialBtnDark = styled.button`
     color: #383838;
     white-space: nowrap;
 
-    &:hover {
-        background: #e6e6e6;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #e6e6e6;;
+        transform: scale(0.1);
+        mix-blend-mode: multiply;
+        opacity: 0;
+        border-radius: 0.4rem;
+        transition:
+            transform 300ms,
+            opacity 300ms,
+            background-color 300ms;
+    }
+
+    &:hover::before,
+    &:focus::before {
+        opacity: 1;
+        transform: scale(1);
     }
 
     &:active {

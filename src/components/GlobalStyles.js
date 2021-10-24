@@ -35,12 +35,9 @@ const GlobalStyles = createGlobalStyle`
         font-weight: 900;
         text-transform: uppercase;
         transition: all 250ms ease-in-out;
-        transition-property: background-color, color;
         border-radius: 0.4rem;
+        position: relative;
 
-        &:focus, &:active {
-            outline: none;
-        }
         @media (max-width: 500px){
             padding: 0.7rem 1.7rem;
         }
@@ -48,7 +45,6 @@ const GlobalStyles = createGlobalStyle`
         @media (max-width: 360px){
             margin-bottom: 0.5rem;
         }
-
     }
 
     a {
