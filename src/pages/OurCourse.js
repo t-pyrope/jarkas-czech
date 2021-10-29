@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { AnimatePresence } from 'framer-motion';
 import CourseSection from '../components/CourseSection';
 import AdvantagesSection from '../components/AdvantagesSection';
 import ExpectSection from '../components/ExpectSection';
@@ -14,8 +15,10 @@ const OurCourse = ({
 }) => {
   return (
     <main role="main">
-      {enrollActive ? <EnrollCard setEnrollActive={setEnrollActive} /> : ''}
-      {trialActive ? <TrialCard setTrialActive={setTrialActive} /> : ''}
+      <AnimatePresence>
+        {enrollActive ? <EnrollCard setEnrollActive={setEnrollActive} /> : ''}
+        {trialActive ? <TrialCard setTrialActive={setTrialActive} /> : ''}
+      </AnimatePresence>
       <CourseSection setEnrollActive={setEnrollActive} setTrialActive={setTrialActive} />
       <AdvantagesSection setEnrollActive={setEnrollActive} setTrialActive={setTrialActive} />
       <RecommendationSection setEnrollActive={setEnrollActive} setTrialActive={setTrialActive} />
