@@ -1,13 +1,16 @@
 /* eslint-disable no-console */
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { Link, useLocation } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 import { navAnimation } from '../animation';
 
+import NavItem from './NavItem';
+import Hamburger from './Hamburger';
+
 const Nav = () => {
-  const { pathname } = useLocation();
   const [scrolled, setScrolled] = useState(false);
+  const [isHamOpen, setIsHamOpen] = useState(false);
 
   const scrollHandler = () => {
     if (window.scrollY >= 20) {
@@ -24,40 +27,36 @@ const Nav = () => {
     };
   }, []);
 
+  const toggleMenu = () => {
+    setIsHamOpen(!isHamOpen);
+  }
+
   return (
-    <NavStyled
-      variants={navAnimation}
-      initial="hidden"
-      animate={scrolled ? 'show' : 'hidden'}
-    >
-      <h1><Link to="/">Jarka&#39;s Czech</Link></h1>
-      <ul>
-        <li>
-          <Link to="/">Our Courses</Link>
-          <Line
-            initial={{ width: '0%' }}
-            transition={{ duration: 0.4 }}
-            animate={{ width: pathname === '/' ? '50%' : '0%' }}
-          />
-        </li>
-        <li>
-          <Link to="/team">Our Team</Link>
-          <Line
-            initial={{ width: '0%' }}
-            transition={{ duration: 0.4 }}
-            animate={{ width: pathname === '/team' ? '45%' : '0%' }}
-          />
-        </li>
-        <li>
-          <Link to="./contacts">Contact Us</Link>
-          <Line
-            initial={{ width: '0%' }}
-            transition={{ duration: 0.4 }}
-            animate={{ width: pathname === '/contacts' ? '50%' : '0%' }}
-          />
-        </li>
-      </ul>
-    </NavStyled>
+    <>
+      <AnimatePresence>
+        {isHamOpen && <Hamburger setIsHamOpen={setIsHamOpen} />}
+      </AnimatePresence>
+      <NavStyled
+        variants={navAnimation}
+        initial="hidden"
+        animate={scrolled ? 'show' : 'hidden'}
+      >
+        <h1><Link to="/">Jarka&#39;s Czech</Link></h1>
+        <ul>
+          <NavItem link="/" title="Our Course"/>
+          <NavItem link="/team" title="Our Team"/>
+          <NavItem link="/contacts" title="Contact Us"/>
+        </ul>
+        <div
+          className="hamburger-button"
+          onClick={toggleMenu}
+        >
+          <div className="burger"></div>
+          <div className="burger"></div>
+          <div className="burger"></div>
+        </div>
+      </NavStyled>
+    </>
   );
 };
 
@@ -67,7 +66,6 @@ const NavStyled = styled(motion.nav)`
     min-height: 10vh;
     margin: auto;
     align-items: stretch;
-    background-color: #82BBD6;
     color: white;
     padding: 1rem 10rem;
     position: sticky;
@@ -100,6 +98,14 @@ const NavStyled = styled(motion.nav)`
         }
     }
 
+    .hamburger-button {
+      display: none;
+      width: 2rem;
+      height: 2rem;
+      justify-content: space-around;
+      flex-flow: column nowrap;
+    }
+
     @media (max-width: 1300px) {
         padding: 1rem 4rem;
         text-align: center;
@@ -109,25 +115,25 @@ const NavStyled = styled(motion.nav)`
     }
 
     @media (max-width: 768px){
-        padding: 0.7rem 0.5rem;
+        padding: 0.7rem 1rem;
+        align-items: center;
 
-        li{
-            padding-left: 0.8rem;
+        ul {
+          display: none;
+        }
+
+        .hamburger-button {
+          display: flex;
+        }
+
+        .burger {
+          width: 2rem;
+          height: 0.25rem;
+          border-radius: 10px;
+          background-color: rgba(0,0,0,0.4);
+          transform-origin: 1px;
         }
     }
-
-    @media (max-width: 320px) {
-        display: block;
-    }
-`;
-
-const Line = styled(motion.div)`
-    width: 0%;
-    height: 2px;
-    background-color: #324739;
-    position: absolute;
-    bottom: -5%;
-    margin: auto;
 `;
 
 export default Nav;
