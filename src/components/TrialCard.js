@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import { TrialBtnDark } from '../styles';
-import { cardAnimation, btnAnimation } from '../animation';
+import { cardAnimation } from '../animation';
 import cancel from '../img/cancel.png';
 
 const TrialCard = ({ setTrialActive }) => {
@@ -30,7 +30,7 @@ const TrialCard = ({ setTrialActive }) => {
             <li>&nbsp;</li>
             <li>&nbsp;</li>
           </ul>
-          <TrialBtnDark variants={btnAnimation} initial="hidden" whileTap="tap">Try for free</TrialBtnDark>
+          <TrialBtnDark>Try for free</TrialBtnDark>
         </div>
       </Card>
     </Wrapper>

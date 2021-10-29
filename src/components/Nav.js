@@ -25,22 +25,36 @@ const Nav = () => {
   }, []);
 
   return (
-    <NavStyled variants={navAnimation} initial="hidden" animate={scrolled ? 'show' : 'hidden'}>
+    <NavStyled
+      variants={navAnimation}
+      initial="hidden"
+      animate={scrolled ? 'show' : 'hidden'}
+    >
       <h1><Link to="/">Jarka&#39;s Czech</Link></h1>
       <ul>
         <li>
           <Link to="/">Our Courses</Link>
-          <Line initial={{ width: '0%' }} transition={{ duration: 0.4 }} animate={{ width: pathname === '/' ? '50%' : '0%' }} />
+          <Line
+            initial={{ width: '0%' }}
+            transition={{ duration: 0.4 }}
+            animate={{ width: pathname === '/' ? '50%' : '0%' }}
+          />
         </li>
         <li>
           <Link to="/team">Our Team</Link>
-          <Line initial={{ width: '0%' }} transition={{ duration: 0.4 }} animate={{ width: pathname === '/team' ? '45%' : '0%' }} />
-
+          <Line
+            initial={{ width: '0%' }}
+            transition={{ duration: 0.4 }}
+            animate={{ width: pathname === '/team' ? '45%' : '0%' }}
+          />
         </li>
         <li>
           <Link to="./contacts">Contact Us</Link>
-          <Line initial={{ width: '0%' }} transition={{ duration: 0.4 }} animate={{ width: pathname === '/contacts' ? '50%' : '0%' }} />
-
+          <Line
+            initial={{ width: '0%' }}
+            transition={{ duration: 0.4 }}
+            animate={{ width: pathname === '/contacts' ? '50%' : '0%' }}
+          />
         </li>
       </ul>
     </NavStyled>

@@ -7,13 +7,6 @@ export const navAnimation = {
   },
 };
 
-export const btnAnimation = {
-  hidden: { scale: 1 },
-  tap: {
-    scale: 0.95,
-  },
-};
-
 export const cardAnimation = {
   hidden: {
     opacity: 0,

@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { ActionBtn } from '../styles';
-import { cardAnimation, btnAnimation } from '../animation';
+import { cardAnimation } from '../animation';
 import cancel from '../img/cancel.png';
 
 const EnrollCard = ({ setEnrollActive }) => {
@@ -14,27 +14,25 @@ const EnrollCard = ({ setEnrollActive }) => {
   };
   return (
     <Wrapper className="wrapper" onClick={exitCardHandler}>
-      <AnimatePresence>
-        <Card className="card" variants={cardAnimation} initial="hidden" animate="show" exit="exit">
-          <div className="card-header">
-            <p>Pay $9 per month</p>
-            <button type="button" aria-label="go back" onClick={() => setEnrollActive(false)}>
-              <img src={cancel} alt="" />
-            </button>
-          </div>
-          <div className="card-body">
-            <h3>What you will get</h3>
-            <div className="line" />
-            <ul>
-              <li> Instant access to all of 13 courses (new added frequently)</li>
-              <li>Daily plan for training</li>
-              <li>Access to a private facebook group</li>
-              <li>Tutoring</li>
-            </ul>
-            <ActionBtn variants={btnAnimation} initial="hidden" whileTap="tap">Enroll</ActionBtn>
-          </div>
-        </Card>
-      </AnimatePresence>
+      <Card className="card" variants={cardAnimation} initial="hidden" animate="show" exit="exit">
+        <div className="card-header">
+          <p>Pay $9 per month</p>
+          <button type="button" aria-label="go back" onClick={() => setEnrollActive(false)}>
+            <img src={cancel} alt="" />
+          </button>
+        </div>
+        <div className="card-body">
+          <h3>What you will get</h3>
+          <div className="line" />
+          <ul>
+            <li> Instant access to all of 13 courses (new added frequently)</li>
+            <li>Daily plan for training</li>
+            <li>Access to a private facebook group</li>
+            <li>Tutoring</li>
+          </ul>
+          <ActionBtn>Enroll</ActionBtn>
+        </div>
+      </Card>
     </Wrapper>
   );
 };

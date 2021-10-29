@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ActionBtn, TrialBtnDark } from '../styles';
-import { btnAnimation } from '../animation';
 
 const EnrollSection = () => {
   return (
@@ -24,7 +23,7 @@ const EnrollSection = () => {
               <li>Access to a private facebook group</li>
               <li>Help of teachers</li>
             </ul>
-            <ActionBtn variants={btnAnimation} initial="hidden" whileTap="tap">Enroll</ActionBtn>
+            <ActionBtn>Enroll</ActionBtn>
           </div>
         </Card>
         <Card>
@@ -43,7 +42,7 @@ const EnrollSection = () => {
               <li>&nbsp;</li>
               <li>&nbsp;</li>
             </ul>
-            <TrialBtnDark variants={btnAnimation} initial="hidden" whileTap="tap">Try for free</TrialBtnDark>
+            <TrialBtnDark>Try for free</TrialBtnDark>
           </div>
         </Card>
       </Cards>
